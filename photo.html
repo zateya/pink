@@ -14,7 +14,7 @@
           <button class="main-nav__trigger" type="button"><span></span></button>
           <div class="main-nav__wrapper">
             <ul class="main-menu">
-              <li class="main-menu__item"><a>Главная</a></li>
+              <li class="main-menu__item"><a href="index.html">Главная</a></li>
               <li class="main-menu__item"><a href="photo.html">Фотографии</a></li>
               <li class="main-menu__item"><a href="form.html">Конкурс</a></li>
               <li class="main-menu__item"><a href="#">HTML Academy</a></li>
@@ -201,25 +201,28 @@
                 <img src="http://placehold.it/280x374" alt="Загруженное изоражение" width="280" height="374">
               </figure>
               <div class="photo-editor__fields">
-                <div class="photo-editor__tabs">
-                  <input class="photo-editor__tool-tab  photo-editor__tool-tab--crop" type="radio" name="photo-editor-tab">Обрезка</input>
-                  <input class="photo-editor__tool-tab  photo-editor__tool-tab--color" type="radio" name="photo-editor-tab">Цветокоррекция</input>
-                  <input class="photo-editor__tool-tab  photo-editor__tool-tab--brightness" type="radio" name="photo-editor-tab">Яркость</input>
-                </div>
-                <div class="photo-editor__tools">
-                  <div class="photo-editor__tool-block">
+                <ul class="photo-editor__tabs">
+                  <li class="photo-editor__tabs-item">
                     <label class="photo-editor__tool-name  photo-editor__tool-name--crop" for="crop">Обрезка</label>
-                    <input class="photo-editor__tool-range" id="crop" type="range" min="0" max="100" step="1" value="50">
-                  </div>
-                  <div class="photo-editor__tool-block">
+                  </li>
+                  <li class="photo-editor__tabs-item">
                     <label class="photo-editor__tool-name  photo-editor__tool-name--color" for="color">Цветокоррекция</label>
-                    <input class="photo-editor__tool-range" id="color" type="range" min="0" max="100" step="1" value="50">
-                  </div>
-                  <div class="photo-editor__tool-block">
+                  </li>
+                  <li class="photo-editor__tabs-item">
                     <label class="photo-editor__tool-name  photo-editor__tool-name--brightness" for="brightness">Яркость</label>
-                    <input class="photo-editor__tool-range" id="brightness" type="range" min="0" max="100" step="1" value="50">
-                  </div>
-                </div>
+                  </li>
+                </ul>
+                <ul class="photo-editor__tools">
+                  <li class="photo-editor__tools-item">
+                    <input class="photo-editor__tool-range  photo-editor__tool-range--crop" id="crop" type="range" min="0" max="100" step="1" value="50">
+                  </li>
+                  <li class="photo-editor__tools-item">
+                    <input class="photo-editor__tool-range  photo-editor__tool-range--color" id="color" type="range" min="0" max="100" step="1" value="50">
+                  </li>
+                  <li class="photo-editor__tools-item">
+                    <input class="photo-editor__tool-range  photo-editor__tool-range--brightness" id="brightness" type="range" min="0" max="100" step="1" value="50">
+                  </li>
+                </ul>
                 <button class="photo-editor__submit-btn" type="submit">Запостить</button>
                 <button class="photo-editor__cansel-btn" type="reset">Отмена</button>
               </div>
