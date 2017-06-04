@@ -1,0 +1,40 @@
+.intro {
+  background-color: $blue-dark; /* opened menu & mobile only*/
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: $white;
+  min-height: 237px;
+
+  &--index {
+    padding: 0;
+  }
+}
+
+.intro__inner {
+  @include container;
+  padding-top: 100px;
+  padding-bottom: 38px;
+
+  &--index {
+    padding: 0; /* mobile only*/
+  }
+
+  &--index::before {
+    content: '';
+    display: block;
+    position: relative;
+    min-height: 462px;
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+}
+
+.intro__title {
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}

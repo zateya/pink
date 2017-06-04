@@ -1,0 +1,16 @@
+.downloads {
+  padding: 28px 20px 34px;
+  background-color: $blue-darkest;
+  text-align: center;
+}
+
+.downloads__slogan {
+  @include visually-hidden;
+}
+
+.downloads__desc {
+  font-size: $font-size;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 26px;
+}

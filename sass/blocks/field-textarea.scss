@@ -1,0 +1,15 @@
+.field-textarea {
+  padding:  15px 20px 14px;
+  border: 2px solid $grey;
+  border-radius: 3px;
+  font-family: $font;
+  font-size: 18px;
+  line-height: 30px;
+  color: $font-color;
+  outline: none;
+
+  &::placeholder {
+    color: $font-color;
+    opacity: 1;
+  }
+}

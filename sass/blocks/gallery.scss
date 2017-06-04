@@ -1,0 +1,16 @@
+.gallery {
+  padding-top: 53px;
+}
+
+.gallery__lead {
+  @include container;
+  @include reset-child-margins;
+  margin-bottom: 55px;
+  font-size: $font-size;
+  line-height: 30px;
+  text-align: center;
+}
+
+.gallery__inner {
+  @include container;
+}

@@ -1,0 +1,11 @@
+.photo-upload {
+  padding-top: 48px;
+}
+
+.photo-upload__lead {
+  @include container;
+  @include reset-child-margins;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 48px;
+}
