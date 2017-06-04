@@ -1,0 +1,21 @@
+.field-text__label {
+  text-transform: uppercase;
+  color: $pink;
+  line-height: 30px;
+}
+
+.field-text__input {
+  padding:  15px 20px 14px;
+  border: 2px solid $grey;
+  border-radius: 3px;
+  font-family: $font;
+  font-size: 18px;
+  line-height: 30px;
+  color: $font-color;
+  outline: none;
+
+  &::placeholder {
+    color: $font-color;
+    opacity: 1;
+  }
+}

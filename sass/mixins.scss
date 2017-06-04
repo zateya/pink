@@ -1,0 +1,77 @@
+@mixin visually-hidden() {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-child-margins() {
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin angled-bg($height: 25px, $bgcolor: $grey-light) {
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $height;
+    background-color: inherit;
+    border-top: $height solid $white;
+    border-right: 100vw solid $bgcolor;
+    border-left: 0;
+    border-left: 0;
+  }
+}
+
+@mixin container() {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablets) {
+    width: 660px;
+  }
+
+  @media (min-width: $desktops) {
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/*example: panorama post*/
+@mixin container-fluid() {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablets) {
+    width: auto;
+  }
+
+  @media (min-width: $desktops) {
+    width: auto;
+  }
+}

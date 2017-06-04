@@ -1,0 +1,10 @@
+.contest {
+  padding-top: 42px;
+}
+
+.contest__lead {
+  @include container;
+  @include reset-child-margins;
+  line-height: 30px;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+.photo-editor__inner {
+  @include container;
+}
+
+@media (max-width: $desktops) {
+  .photo-editor {
+    background-color: $grey-light;
+  }
+
+  .photo-editor__form {
+    background-color: transparent;
+  }
+}
+
+.photo-editor__form {
+  padding-top: 20px;
+  padding-bottom: 41px;
+  background-color: $grey-light;
+}
