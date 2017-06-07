@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header  page-header--full">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <img src="img/logo-pink-white-mobile.svg" alt="Pink - приложение для фотографов" width="75" height="22">
         </a>
-        <nav class="main-nav" aria-label="Основное меню">
+        <nav class="main-nav  main-nav--closed  main-nav--nojs" aria-label="Основное меню">
           <button class="main-nav__trigger" type="button"><span></span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__items">
               <li class="main-nav__item"><a href="index.html">Главная</a></li>
-              <li class="main-nav__item"><a>Фотографии</a></li>
+              <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
               <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
               <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank">HTML Academy</a></li>
             </ul>
@@ -25,7 +26,7 @@
       </div>
     </header>
     <main class="main-gallery">
-      <header class="intro">
+      <header class="intro  intro--inner  intro--short">
         <div class="intro__inner">
           <h1 class="intro__title">Фотографии пользователей</h1>
         </div>
@@ -38,13 +39,13 @@
           </p>
         </div>
         <article class="photo-post  panorama">
-          <div class="panorama__rubric">
-            <div class="panorama__rubric-inner">
-              <span class="panorama__rubric-name">Панорама дня</span>
-            </div>
-          </div>
           <div class="photo-post__image  panorama__image">
             <img src="img/panorama-mobile@1x.jpg" alt="Анна" width="320" height="137">
+            <div class="panorama__rubric">
+              <div class="panorama__rubric-inner">
+                <span class="panorama__rubric-name">Панорама дня</span>
+              </div>
+            </div>
           </div>
           <div class="panorama__inner">
             <div class="photo-post__body  panorama__body">
@@ -71,7 +72,7 @@
               <div class="photo-post__image">
                 <img src="img/photo-1-mobile@1x.jpg" alt="Левон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
+              <div class="post-list__item-body  photo-post__body">
                 <header class="photo-post__header">
                   <span class="photo-post__author">Левон</span>
                   <span class="photo-post__time">(5 часов назад)</span>
@@ -92,7 +93,7 @@
               <div class="photo-post__image">
                 <img src="img/photo-2-mobile@1x.jpg" alt="Антон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
+              <div class="post-list__item-body  photo-post__body">
                 <header class="photo-post__header">
                   <span class="photo-post__author">Антон</span>
                   <span class="photo-post__time">(12 часов назад)</span>
@@ -113,7 +114,7 @@
               <div class="photo-post__image">
                 <img src="img/photo-3-mobile@1x.jpg" alt="Антон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
+              <div class="post-list__item-body  photo-post__body">
                 <header class="photo-post__header">
                   <span class="photo-post__author">Борис</span>
                   <span class="photo-post__time">(20 часов назад)</span>
@@ -134,7 +135,7 @@
               <div class="photo-post__image">
                 <img src="img/photo-4-mobile@1x.jpg" alt="Антон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
+              <div class="post-list__item-body  photo-post__body">
                 <header class="photo-post__header">
                   <span class="photo-post__author">Сергей</span>
                   <span class="photo-post__time">(25 часов назад)</span>
@@ -155,7 +156,7 @@
               <div class="photo-post__image">
                 <img src="img/photo-5-mobile@1x.jpg" alt="Максим" width="280" height="180">
               </div>
-              <div class="photo-post__body">
+              <div class="post-list__item-body  photo-post__body">
                 <header class="photo-post__header">
                   <span class="photo-post__author">Максим</span>
                   <span class="photo-post__time">(40 часов назад)</span>
@@ -176,7 +177,7 @@
               <div class="photo-post__image">
                 <img src="img/photo-6-mobile@1x.jpg" alt="Надежда" width="280" height="180">
               </div>
-              <div class="photo-post__body">
+              <div class="post-list__item-body  photo-post__body">
                 <header class="photo-post__header">
                   <span class="photo-post__author">Надежда</span>
                   <span class="photo-post__time">(45 часов назад)</span>
@@ -241,8 +242,8 @@
                     </div>
                   </div>
                 </div>
-                <button class="photo-editor__upload-changes  btn" type="submit">Запостить</button>
-                <button class="photo-editor__cansel-changes  btn  btn--greyscale" type="reset">Отмена</button>
+                <button class="photo-editor__upload-btn  btn  btn--upload" type="submit">Запостить</button>
+                <button class="photo-editor__cancel-btn  btn  btn--cancel" type="reset">Отмена</button>
               </div>
             </form>
           </div>
@@ -266,5 +267,6 @@
         </a>
       </div>
     </footer>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

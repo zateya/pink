@@ -1,19 +1,14 @@
 .contest-form__body {
-  @include container;
   display: flex;
   flex-direction: column;
 
-  @media (max-width: $tablets) {
-    width: 100%;
+  @media (max-width: $phones-max) {
     padding: 0;
   }
 }
 
 .contest-form__fieldset {
-  @media (max-width: $tablets) {
-    margin-left: -20px;
-    margin-right: -20px;
-
+  @media (max-width: $phones-max) {
     &:nth-child(2n) {
       background-color: $grey-light;
     }
@@ -21,10 +16,17 @@
 }
 
 .contest-form__controls {
-  @include container;
-
-  @media (max-width: $tablets) {
+  @media (max-width: $phones-max) {
+    @include container-phones(20px);
     text-align: center;
+  }
+}
+
+.contest-form__submit-btn {
+  width: 280px;
+
+  @media (min-width: $tablets) {
+    width: 300px;
   }
 }
 
@@ -32,7 +34,7 @@
   line-height: 30px;
   text-transform: uppercase;
 
-  @media (max-width: $tablets) {
+  @media (max-width: $phones-max) {
     margin-top: 43px;
   }
 }

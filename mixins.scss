@@ -44,20 +44,15 @@
 }
 
 @mixin container() {
-  width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 280px;
   margin: 0 auto;
 
   @media (min-width: $tablets) {
-    width: auto;
-    max-width: 660px;
+    width: 620px;
   }
 
   @media (min-width: $desktops) {
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 960px;
+    width: 940px;
   }
 }
 

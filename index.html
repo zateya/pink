@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header  page-header--full">
       <div class="page-header__wrapper">
         <a class="page-header__logo">
           <img src="img/logo-pink-white-mobile.svg" alt="Pink - приложение для фотографов" width="75" height="22">
         </a>
-        <nav class="main-nav" aria-label="Основное меню">
+        <nav class="main-nav  main-nav--closed  main-nav--nojs" aria-label="Основное меню">
           <button class="main-nav__trigger" type="button"><span></span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__items">
-              <li class="main-nav__item"><a>Главная</a></li>
+              <li class="main-nav__item  main-nav__item--active"><a>Главная</a></li>
               <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
               <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
               <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank">HTML Academy</a></li>
@@ -25,22 +26,26 @@
       </div>
     </header>
     <main class="main-index">
-      <header class="intro  intro--index">
-        <div class="intro__inner  intro__inner--index">
+      <header class="intro  intro--index  intro--short">
+        <div class="intro__inner">
           <h1 class="intro__title  sr-only">Приложение для фотографов Pink</h1>
+          <section class="downloads">
+            <div class="downloads__wrapper">
+              <div class="downloads__inner">
+                <h2 class="downloads__slogan">Взгляните на жизнь иначе!</h1>
+                <a class="downloads__download-btn  btn  btn--download" href="https://itunes.apple.com" target="_blank" title="Скачать на iTunes">Скачать приложение</a>
+                <div class="downloads__apps">
+                  <a class="downloads__app  downloads__app--apple" href="https://itunes.apple.com" target="_blank" title="Скачать для iPhone и iPad">Apple</a>
+                  <a class="downloads__app  downloads__app--android" href="https://play.google.com" target="_blank" title="Скачать для Android">Android</a>
+                  <a class="downloads__app  downloads__app--windows" href="https://www.microsoft.com/store/" target="_blank" title="Скачать для Windows Phone">Windows</a>
+                </div>
+                <div class="downloads__desc">
+                  Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X,&nbsp;Windows&nbsp;8
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <section class="downloads">
-          <h2 class="downloads__slogan">Взгляните на жизнь иначе!</h2>
-          <a class="downloads__download-btn  btn  btn--invert" href="https://itunes.apple.com" target="_blank" title="Скачать на iTunes">Скачать приложение</a>
-          <div class="downloads__apps">
-            <a class="downloads__app  downloads__app--apple" href="https://itunes.apple.com" target="_blank" title="Скачать для iPhone и iPad">Apple</a>
-            <a class="downloads__app  downloads__app--android" href="https://play.google.com" target="_blank" title="Скачать для Android">Android</a>
-            <a class="downloads__app  downloads__app--windows" href="https://www.microsoft.com/store/" target="_blank" title="Скачать для Windows Phone">Windows</a>
-          </div>
-          <div class="downloads__desc">
-            Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X,&nbsp;Windows&nbsp;8
-          </div>
-        </section>
       </header>
       <section class="advantages">
         <div class="advantages__lead">
@@ -215,5 +220,6 @@
         </a>
       </div>
     </footer>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

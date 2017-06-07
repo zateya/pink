@@ -3,7 +3,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @media (max-width: $tablets) {
+  @media (max-width: $phones-max) {
     text-align: center;
 
     &--index {

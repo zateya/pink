@@ -1,7 +1,6 @@
 .post-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   @media (min-width: $tablets) {
     margin-top: 20px;
@@ -13,14 +12,27 @@
 }
 
 .post-list__item {
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
   width: 280px;
 
   @media (min-width: $tablets) {
     width: 300px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: $tablets) and (max-width: $tablets-max) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 
   @media (min-width: $desktops) {
     margin-top: 40px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }

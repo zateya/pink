@@ -1,11 +1,13 @@
 .form-box {
   margin: 0;
-  padding: 40px 20px;
+  padding: 40px 0;
   border: 0;
   position: relative;
 }
 
 .form-box__legend {
+  margin: 0;
+  padding: 0;
   margin-bottom: 20px;
   float: left;
   width: 100%;
@@ -17,25 +19,6 @@
 
 .form-box__legend + * {
   clear: both;
-}
-
-.form-box__field-text:not(:last-child) {
-  @media (max-width: $tablets) {
-    margin-bottom: 15px;
-  }
-}
-
-.form-box__text-input {
-  @media (max-width: $tablets) {
-    display: block;
-    width: 100%;
-  }
-}
-
-.form-box__text-label + .form-box__text-input {
-  @media (max-width: $tablets) {
-    margin-top: 5px;
-  }
 }
 
 .form-box__checkbox-fields {
@@ -58,4 +41,24 @@
   width: 100%;
   height: 201px;
   resize: none;
+}
+
+@media (max-width: $phones-max) {
+
+  .form-box__inner {
+    @include container-phones (20px);
+  }
+
+  .form-box__field-text:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .form-box__text-input {
+    display: block;
+    width: 100%;
+  }
+
+  .form-box__text-label + .form-box__text-input {
+    margin-top: 5px;
+  }
 }

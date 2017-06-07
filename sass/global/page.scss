@@ -13,10 +13,15 @@ body {
   line-height: $line-height;
   margin: 0;
   padding: 0;
+  min-width: 280px;
 }
 
 figure {
-  margin:0;
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
 }
 
 img {

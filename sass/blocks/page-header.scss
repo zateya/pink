@@ -1,8 +1,10 @@
 .page-header {
-  background-color: $blue-dark; /* background-color: rgba($black, 0.3); */
+  position: absolute;
+  background-color: rgba($black, 0.3);
   color: $white;
   width: 100%;
   min-height: 70px;
+  z-index: 2;
 }
 
 .page-header__logo {
@@ -13,4 +15,33 @@
   margin-bottom: 26px;
   margin-left: 20px;
   margin-right: 20px;
+}
+
+@media (max-width: $tablets-max) {
+  .page-header--full {
+    position: relative;
+    background-color: $blue-dark;
+  }
+}
+
+@media (min-width: $tablets) {
+  .page-header {
+    min-height: 110px;
+  }
+
+  .page-header__logo {
+    height: 40px;
+    margin-top: 27px;
+    margin-bottom: 43px;
+  }
+
+  .page-header__logo img {
+    padding-top: 17px;
+  }
+}
+
+@media (min-width: $desktops) {
+  .page-header__wrapper {
+    display: flex;
+  }
 }

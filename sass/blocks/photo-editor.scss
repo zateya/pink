@@ -2,7 +2,7 @@
   @include container;
 }
 
-@media (max-width: $desktops) {
+@media (max-width: $phones-max) {
   .photo-editor {
     background-color: $grey-light;
   }

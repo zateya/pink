@@ -2,6 +2,15 @@
   padding-top: 42px;
 }
 
+.contest__inner {
+  @include container;
+
+  @media (max-width: $phones-max) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .contest__lead {
   @include container;
   @include reset-child-margins;

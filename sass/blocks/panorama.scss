@@ -1,21 +1,24 @@
 .panorama {
   position: relative;
 
-  @include container-fluid;
+  @media (max-width: $phones-max) {
+    @include container-phones;
+  }
 }
 
 .panorama__inner {
   @include container;
 }
 
-.panorama__rubric-inner {
-  @include container;
-}
-
 .panorama__rubric {
   position: absolute;
   top: 0;
+  right:0;
   width: 100%;
+}
+
+.panorama__rubric-inner {
+  @include container;
   text-align: right;
 }
 

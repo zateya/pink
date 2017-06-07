@@ -6,6 +6,8 @@ $blue-dark: #283645;
 $grey-light: #f2f2f2;
 $grey: #e5e5e5;
 $pink: #d22856;
+$green: #2aab6d;
+$green-darker: #1c9b5e;
 
 /*global colors rules*/
 $font-color: $blue-dark;
@@ -18,6 +20,9 @@ $font: "Open Sans", "Arial", sans-serif;
 $font-size: 14px;
 $line-height: 24px;
 
-/*viewport sizes*/
-$tablets: 700px;
-$desktops: 980px;
+/*sizes and breakpoints*/
+$phones: 320px;
+$phones-max: 659px;
+$tablets: 660px;
+$tablets-max: 959px;
+$desktops: 960px;

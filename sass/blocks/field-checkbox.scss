@@ -3,6 +3,7 @@
 }
 
 .field-checkbox__label {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -26,6 +27,14 @@
     border: 2px solid $grey;
     border-radius: 2px;
     z-index: 1;
+  }
+
+  &:hover::before {
+    border-color: $blue-dark;
+  }
+
+  &:active::before {
+    border-color: $pink;
   }
 }
 

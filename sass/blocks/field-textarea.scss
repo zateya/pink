@@ -8,6 +8,14 @@
   color: $font-color;
   outline: none;
 
+  &:hover {
+    border-color: $blue-dark;
+  }
+
+  &:active {
+    border-color: $pink;
+  }
+
   &::placeholder {
     color: $font-color;
     opacity: 1;
