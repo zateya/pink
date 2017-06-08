@@ -50,14 +50,13 @@
   margin: 0 auto;
 
   @media (min-width: $tablets) {
-    width: auto;
-    max-width: 660px;
+    width: 660px;
   }
 
   @media (min-width: $desktops) {
-    padding-left: 10px;
+    width: 960px;
     padding-right: 10px;
-    max-width: 960px;
+    padding-left: 10px;
   }
 }
 

@@ -19,15 +19,19 @@
   transform: translateX(-50%);
   line-height: 30px;
   border-collapse: collapse;
+
+  @media (max-width: $phones-max) {
+    width: 262.5%;
+  }
 }
 
 .rates__header {
   position: relative;
+  min-width: 280px;
+  max-width: 280px;
   background-color: $blue-dark;
   color: $white;
   text-transform: uppercase;
-  min-width: 280px;
-  max-width: 280px;
   padding: 20px;
   padding-top: 17px;
   border-right: 2px solid $grey;

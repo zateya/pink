@@ -1,0 +1,20 @@
+.social {
+  font-size: 0;
+}
+
+.social__link {
+  display: inline-block;
+  vertical-align: top;
+  width: 51px;
+  height: 51px;
+  border: 3px solid rgba($blue-dark, 0.1);
+  border-radius: 50%;
+  margin-left: 6px;
+  margin-right: 6px;
+  text-indent: -1000px;
+  overflow: hidden;
+
+  &:hover:not(:active) {
+    border-color: $blue-dark;
+  }
+}
