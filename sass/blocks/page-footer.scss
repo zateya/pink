@@ -3,7 +3,7 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
-  @media (max-width: $tablets) {
+  @media (max-width: $phones-max) {
     text-align: center;
 
     &--index {
@@ -14,15 +14,33 @@
   @media (min-width: $tablets) {
     display: flex;
     justify-content: space-between;
+    padding-top: 36px;
+    padding-bottom: 37px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 70px;
+    padding-bottom: 72px;
   }
 }
 
 .page-footer__logo {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 40px;
 }
 
 .page-footer__social {
-  margin-bottom: 40px;
+  margin-top: 40px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+  }
+}
+
+.page-footer__copyright {
+  margin-top: 40px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+  }
 }

@@ -1,5 +1,18 @@
 .contest {
-  padding-top: 42px;
+  padding-top: 44px;
+
+  @media (min-width: $tablets) {
+    padding-top: 92px;
+  }
+}
+
+.contest__inner {
+  @include container;
+
+  @media (max-width: $phones-max) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .contest__lead {
@@ -7,4 +20,26 @@
   @include reset-child-margins;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $tablets) {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 67px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 88px;
+  }
+}
+
+.contest__lead-fill-form {
+  display: none;
+
+  @media (min-width: $tablets) {
+    display: inline;
+  }
 }

@@ -1,5 +1,13 @@
 .photo-upload {
   padding-top: 48px;
+
+  @media (min-width: $tablets) {
+    padding-top: 71px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 65px;
+  }
 }
 
 .photo-upload__lead {
@@ -8,4 +16,18 @@
   text-align: center;
   line-height: 30px;
   margin-bottom: 48px;
+
+  @media (min-width: $tablets) {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 72px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: 186px;
+    padding-right: 186px;
+    margin-bottom: 69px;
+  }
 }

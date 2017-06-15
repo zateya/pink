@@ -1,26 +1,12 @@
 .post-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   @media (min-width: $tablets) {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktops) {
-    margin-top: 0;
-  }
-}
-
-.post-list__item {
-  margin-top: 20px;
-  width: 280px;
-
-  @media (min-width: $tablets) {
-    width: 300px;
-  }
-
-  @media (min-width: $desktops) {
-    margin-top: 40px;
+    padding-top: 0;
   }
 }

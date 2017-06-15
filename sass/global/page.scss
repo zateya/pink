@@ -7,16 +7,25 @@ html {
 }
 
 body {
-  font-family: $font;
-  color: $font-color;
-  font-size: $font-size;
-  line-height: $line-height;
   margin: 0;
   padding: 0;
+  font-family: $font;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $font-color;
+  background-color: $white;
 }
 
 figure {
-  margin:0;
+  margin: 0;
+}
+
+fieldset {
+  padding: 0;
+}
+
+blockquote {
+  margin: 0;
 }
 
 img {

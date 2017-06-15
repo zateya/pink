@@ -1,10 +1,27 @@
 .advantages {
   padding-top: 43px;
+
+  @media (min-width: $tablets) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 69px;
+    overflow-x: hidden;
+  }
 }
 
 .advantages__lead {
   @include container;
   margin-bottom: 31px;
+
+  @media (min-width: $tablets) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-bottom: 73px;
+  }
 }
 
 .advantages__title {
@@ -13,18 +30,82 @@
   font-weight: 300;
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablets) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $desktops) {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .advantages__subtitle {
   display: block;
   margin-top: 11px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+    max-width: 355px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktops) {
+    max-width: 500px;
+  }
 }
 
 .advantages__wrapper {
+  @include angled-bg($height: 31px);
   position: relative;
   background-color: $grey-light;
   padding-top: 86px;
-  @include angled-bg($height: 31px)
+
+  @media (min-width: $tablets) {
+    @include angled-bg($height: 50px);
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktops) {
+    @include angled-bg($height: 73px);
+    margin-top: 12px;
+    overflow: visible;
+  }
+}
+
+.advantages__inner {
+  @include container;
+  text-align: center;
+
+  @media (min-width: $tablets) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 0;
+  }
+}
+
+.advantages__items {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: $tablets) {
+    padding-left: 50%;
+    text-align: left;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktops) {
+    flex-direction: row;
+    padding: 0;
+    text-align: center;
+  }
 
   &::after {
     content: "";
@@ -39,16 +120,59 @@
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center top;
-  }
-}
 
-.advantages__inner {
-  @include container;
+    @media (min-width: $tablets) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: -68px;
+    }
+
+    @media (min-width: $desktops) {
+      display: none;
+    }
+  }
 }
 
 .advantages__item {
   margin-bottom: 40px;
-  text-align: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktops) {
+    position: relative;
+    width: 300px;
+    padding-top: 357px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 20px;
+    margin-bottom: 70px;
+    font-size: 18px;
+    line-height: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 70px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 186px;
+      height: 302px;
+      left: 50%;
+      top: -12px;
+      transform: translateX(-50%);
+      background-color: $pink;
+      z-index: 2;
+    }
+  }
 }
 
 .advantages__name {
@@ -56,11 +180,106 @@
   line-height: 24px;
   font-weight: 700;
   color: $black;
-  margin: 0;
+  margin-top: 0;
   margin-bottom: 17px;
+
+  @media (min-width: $desktops) {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
 }
 
 .advantages__item p {
   margin-top: 17px;
   margin-bottom: 0;
+
+  @media (min-width: $desktops) {
+    margin-top: 25px;
+  }
+}
+
+.advantages__research {
+  @media (max-width: $phones-max) {
+    @include visually-hidden;
+  }
+
+  @media (min-width: $tablets) {
+    padding-top: 59px;
+    min-height: 335px;
+  }
+
+  @media (min-width: $desktops) {
+    background-color: $grey-light;
+    padding-top: 0px;
+    padding-bottom: 67px;
+    min-height: 410px;
+  }
+}
+
+.advantages__research-inner {
+  @include container;
+  display: flex;
+}
+
+.advantages__research-lead {
+  @include reset-child-margins;
+  position: relative;
+  padding-left: 50%;
+  padding-top: 40px;
+
+  @media (min-width: $desktops) {
+    padding-left: 366px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 238px;
+    height: 276px;
+    background-color: $pink;
+
+    @media (min-width: $desktops) {
+      top: 0;
+      left: 1px;
+      width: 298px;
+      height: 343px;
+    }
+  }
+}
+
+.advantages__research-lead p {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: $desktops) {
+    margin-bottom: 30px;
+  }
+}
+
+.advantages__research-title {
+  margin-bottom: 11px;
+  font-size: 30px;
+  line-height: 36px;
+  color: $black;
+
+  @media (min-width: $tablets) and (max-width: $tablets-max) {
+    width: 175px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-bottom: 25px;
+  }
+}
+
+.advantages__research-link {
+  color: $pink;
+
+  &:hover {
+    text-decoration: none;
+  }
 }

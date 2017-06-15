@@ -38,24 +38,21 @@
     height: $height;
     border-top: $height solid $white;
     border-right: 100vw solid $bgcolor;
-    border-left: none;
+    border-left: 0;
+    border-left: 0;
   }
 }
 
 @mixin container() {
-  width: 320px;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 280px;
   margin: 0 auto;
 
   @media (min-width: $tablets) {
-    width: 660px;
+    width: 620px;
   }
 
   @media (min-width: $desktops) {
-    width: 960px;
-    padding-right: 10px;
-    padding-left: 10px;
+    width: 940px;
   }
 }
 

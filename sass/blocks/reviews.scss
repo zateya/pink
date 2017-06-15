@@ -1,6 +1,26 @@
 .reviews {
   padding-top: 48px;
   padding-bottom: 43px;
+
+  @media (min-width: $tablets) {
+    padding-top: 104px;
+  }
+
+  @media (min-width: $desktops) {
+    position: relative;
+    padding-top: 191px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 72px;
+      left: 50%;
+      width: 79px;
+      height: 63px;
+      transform: translateX(-50%);
+      background-color: $pink;
+    }
+  }
 }
 
 .reviews__inner {
@@ -15,30 +35,102 @@
 }
 
 .reviews__list {
-  @include reset-list;
+  position: relative;
+
+  @media (min-width: $desktops) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .reviews__item {
-  display: none;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-size: 14px;
   line-height: 30px;
+
+  &:not(:first-child) {
+    display: none;
+  }
 }
 
-.reviews__item:first-child {
-  display: block;
+.reviews__client {
+  margin-bottom: 17px;
+
+  @media (min-width: $tablets) {
+    order: 2;
+    margin-top: 42px;
+    margin-bottom: 0;
+  }
 }
 
-.reviews__user {
+.reviews__client-name {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: $black;
   margin: 0;
-  margin-bottom: 17px;
+
+  @media (min-width: $tablets) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktops) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.reviews__client-about {
+  @media (max-width: $phones-max) {
+    @include visually-hidden;
+  }
+
+  @media (min-width: $desktops) {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 5px;
+  }
 }
 
 .reviews__item p {
-  margin-top: 17px;
-  margin-bottom: 0;
+  margin: 0;
+
+  @media (min-width: $tablets) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.reviews__nav {
+  display: none;
+
+  @media (min-width: $desktops) {
+    display: block;
+    position: absolute;
+    top: 22px;
+    width: 22px;
+    border: none;
+    height: 41px;
+    text-indent: -1000px;
+    overflow: hidden;
+    background-color: $pink;
+    cursor: pointer;
+  }
+
+  &--previous {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+.reviews__pagination {
+  @media (min-width: $desktops) {
+    display: none;
+  }
 }

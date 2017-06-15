@@ -1,14 +1,34 @@
 .gallery {
-  padding-top: 53px;
+  padding-top: 46px;
+
+  @media (min-width: $tablets) {
+    padding-top: 92px;
+  }
 }
 
 .gallery__lead {
   @include container;
   @include reset-child-margins;
-  margin-bottom: 55px;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-bottom: 48px;
   font-size: $font-size;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: $tablets) {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 76px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: 186px;
+    padding-right: 186px;
+    margin-bottom: 88px;
+  }
 }
 
 .gallery__inner {

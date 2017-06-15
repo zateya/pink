@@ -1,0 +1,152 @@
+.post__panorama {
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $phones-max) {
+    @include container-phones;
+  }
+}
+
+.post__panorama img {
+  display: block;
+
+  @media (min-width: $tablets) {
+    position: relative;
+    height: 509px;
+    width: auto;
+    max-width: inherit;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $desktops) {
+    height: 506px;
+  }
+}
+
+.post__rubric-wrapper {
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 100%;
+}
+
+.post__rubric-inner {
+  @include container;
+  text-align: right;
+
+  @media (min-width: $tablets) {
+    padding-top: 57px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 54px;
+  }
+}
+
+.post__rubric-title {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $white;
+  background-color: $pink;
+  text-transform: uppercase;
+  padding: 6px 20px;
+}
+
+.post--card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 280px;
+
+  @media (min-width: $tablets) {
+    width: 300px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: $tablets) and (max-width: $tablets-max) {
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktops) {
+    margin-top: 40px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.post__image {
+  @media (min-width: $tablets) {
+    overflow: hidden;
+  }
+}
+
+.post__image img {
+  display: block;
+
+  @media (min-width: $tablets) {
+    position: relative;
+    height: 300px;
+    width: auto;
+    max-width: inherit;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $desktops) {
+    height: 400px;
+  }
+}
+
+.post__body-wrapper {
+  @include container;
+}
+
+.post__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 17px 22px 26px;
+  background-color: $grey-light;
+}
+
+.post__author {
+  font-weight: 700;
+}
+
+.post__text {
+  @include reset-child-margins;
+  flex-grow: 1;
+}
+
+.post__time {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.post__action {
+  font-size: 0;
+  margin-top: 18px;
+  position: relative;
+}
+
+.post__stats {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $pink;
+}
+
+.post__like-btn {
+  display: inline;
+  margin-right: 18px;
+}
