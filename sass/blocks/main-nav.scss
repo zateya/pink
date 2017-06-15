@@ -2,8 +2,15 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-top: 1px solid #000;
   @include reset-list;
+}
+
+.main-nav--opened .main-nav__items {
+  margin-top: 4px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+  }
 }
 
 .main-nav__item a {
@@ -17,8 +24,8 @@
   font-weight: 700;
   line-height: 32px;
   padding: 16px 20px;
-  box-shadow: inset 0 1px 0 rgba(#fff, 0.15),
-              inset 0 -1px 0 #000;
+  box-shadow: 0 -1px 0 $black,
+              inset 0 1px 0 rgba($white, 0.15);
 
   &[href]:hover,
   &[href]:focus {
@@ -27,6 +34,14 @@
 
   &[href]:active {
     color: rgba($white, 0.3);
+  }
+}
+
+.main-nav__item:last-child a {
+  @media (max-width: $tablets-max) {
+    box-shadow: 0 -1px 0 $black,
+                inset 0 1px 0 rgba($white, 0.15),
+                inset 0 -1px 0 $black;
   }
 }
 

@@ -14,20 +14,18 @@
         </a>
         <nav class="main-nav  main-nav--closed  main-nav--nojs" aria-label="Основное меню">
           <button class="main-nav__trigger" type="button"><span></span></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__items">
-              <li class="main-nav__item"><a href="index.html">Главная</a></li>
-              <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
-              <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-              <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank">HTML Academy</a></li>
-            </ul>
-          </div>
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
+            <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="main-nav__item"><a href="http://www.htmlacademy.ru" target="_blank">HTML Academy</a></li>
+          </ul>
         </nav>
       </div>
     </header>
     <main class="main-gallery">
-      <header class="intro  intro--inner  intro--short">
-        <div class="intro__inner">
+      <header class="intro  intro--short">
+        <div class="intro__inner  intro__inner--inner  intro__inner--gallery">
           <h1 class="intro__title">Фотографии пользователей</h1>
         </div>
       </header>
@@ -38,29 +36,28 @@
             Видите, как не хватает ваших?
           </p>
         </div>
-        <article class="photo-post  panorama">
-          <div class="photo-post__image  panorama__image">
+        <article class="post">
+          <div class="post__panorama">
             <img src="img/panorama-mobile@1x.jpg" alt="Анна" width="320" height="137">
-            <div class="panorama__rubric">
-              <div class="panorama__rubric-inner">
-                <span class="panorama__rubric-name">Панорама дня</span>
+            <div class="post__rubric-wrapper">
+              <div class="post__rubric-inner">
+                <span class="post__rubric-title">Панорама дня</span>
               </div>
             </div>
           </div>
-          <div class="panorama__inner">
-            <div class="photo-post__body  panorama__body">
-              <header class="photo-post__header">
-                <span class="photo-post__author">Анна</span>
-                <span class="photo-post__time">(5 минут назад)</span>
+          <div class="post__body-wrapper">
+            <div class="post__body  post__body--stats-ontop">
+              <header class="post__header">
+                <span class="post__author">Анна</span>
+                <span class="post__time">(5 минут назад)</span>
               </header>
-              <div class="photo-post__text">
+              <div class="post__text">
                 <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               </div>
-              <div class="photo-post__action">
-                <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                <span class="photo-post__stats">
-                  <span class="photo-post__stats-name">Hравится:</span>
-                  <span class="photo-post__stats-count">215</span>
+              <div class="post__action">
+                <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                <span class="post__stats">
+                  Hравится: <span class="post__stats-count">215</span>
                 </span>
               </div>
             </div>
@@ -68,128 +65,122 @@
         </article>
         <div class="gallery__inner">
           <div class="post-list">
-            <article class="post-list__item  photo-post">
-              <div class="photo-post__image">
+            <article class="post  post--card">
+              <div class="post__image">
                 <img src="img/photo-1-mobile@1x.jpg" alt="Левон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
-                <header class="photo-post__header">
-                  <span class="photo-post__author">Левон</span>
-                  <span class="photo-post__time">(5 часов назад)</span>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Левон</span>
+                  <span class="post__time">(5 часов назад)</span>
                 </header>
-                <div class="photo-post__text">
+                <div class="post__text">
                   <p>Вчера он на луну летал, сегодня в руки к нам попал.</p>
                 </div>
-                <div class="photo-post__action">
-                  <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                  <span class="photo-post__stats">
-                    <span class="photo-post__stats-name">Hравится:</span>
-                    <span class="photo-post__stats-count">356</span>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <span class="post__stats">
+                    Hравится: <span class="post__stats-count">356</span>
                   </span>
                 </div>
               </div>
             </article>
-            <article class="post-list__item  photo-post">
-              <div class="photo-post__image">
+            <article class="post  post--card">
+              <div class="post__image">
                 <img src="img/photo-2-mobile@1x.jpg" alt="Антон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
-                <header class="photo-post__header">
-                  <span class="photo-post__author">Антон</span>
-                  <span class="photo-post__time">(12 часов назад)</span>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Антон</span>
+                  <span class="post__time">(12 часов назад)</span>
                 </header>
-                <div class="photo-post__text">
+                <div class="post__text">
                   <p>Соседи будут рады!</p>
                 </div>
-                <div class="photo-post__action">
-                  <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                  <span class="photo-post__stats">
-                    <span class="photo-post__stats-name">Hравится:</span>
-                    <span class="photo-post__stats-count">666</span>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <span class="post__stats">
+                    Hравится: <span class="post__stats-count">666</span>
                   </span>
                 </div>
               </div>
             </article>
-            <article class="post-list__item  photo-post">
-              <div class="photo-post__image">
+            <article class="post  post--card">
+              <div class="post__image">
                 <img src="img/photo-3-mobile@1x.jpg" alt="Антон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
-                <header class="photo-post__header">
-                  <span class="photo-post__author">Борис</span>
-                  <span class="photo-post__time">(20 часов назад)</span>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Борис</span>
+                  <span class="post__time">(20 часов назад)</span>
                 </header>
-                <div class="photo-post__text">
+                <div class="post__text">
                   <p>Здесь могла быть ваша цитата о высоком и вечном.</p>
                 </div>
-                <div class="photo-post__action">
-                  <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                  <span class="photo-post__stats">
-                    <span class="photo-post__stats-name">Hравится:</span>
-                    <span class="photo-post__stats-count">215</span>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <span class="post__stats">
+                    Hравится: <span class="post__stats-count">215</span>
                   </span>
                 </div>
               </div>
             </article>
-            <article class="post-list__item  photo-post">
-              <div class="photo-post__image">
+            <article class="post  post--card">
+              <div class="post__image">
                 <img src="img/photo-4-mobile@1x.jpg" alt="Антон" width="280" height="180">
               </div>
-              <div class="photo-post__body">
-                <header class="photo-post__header">
-                  <span class="photo-post__author">Сергей</span>
-                  <span class="photo-post__time">(25 часов назад)</span>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Сергей</span>
+                  <span class="post__time">(25 часов назад)</span>
                 </header>
-                <div class="photo-post__text">
+                <div class="post__text">
                   <p>Самая кубанская в мире!</p>
                 </div>
-                <div class="photo-post__action">
-                  <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                  <span class="photo-post__stats">
-                    <span class="photo-post__stats-name">Hравится:</span>
-                    <span class="photo-post__stats-count">4</span>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <span class="post__stats">
+                    Hравится: <span class="post__stats-count">4</span>
                   </span>
                 </div>
               </div>
             </article>
-            <article class="post-list__item  photo-post">
-              <div class="photo-post__image">
+            <article class="post  post--card">
+              <div class="post__image">
                 <img src="img/photo-5-mobile@1x.jpg" alt="Максим" width="280" height="180">
               </div>
-              <div class="photo-post__body">
-                <header class="photo-post__header">
-                  <span class="photo-post__author">Максим</span>
-                  <span class="photo-post__time">(40 часов назад)</span>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Максим</span>
+                  <span class="post__time">(40 часов назад)</span>
                 </header>
-                <div class="photo-post__text">
+                <div class="post__text">
                   <p>Где снег-то?</p>
                 </div>
-                <div class="photo-post__action">
-                  <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                  <span class="photo-post__stats">
-                    <span class="photo-post__stats-name">Hравится:</span>
-                    <span class="photo-post__stats-count">150</span>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <span class="post__stats">
+                    Hравится: <span class="post__stats-count">150</span>
                   </span>
                 </div>
               </div>
             </article>
-            <article class="post-list__item  photo-post">
-              <div class="photo-post__image">
+            <article class="post  post--card">
+              <div class="post__image">
                 <img src="img/photo-6-mobile@1x.jpg" alt="Надежда" width="280" height="180">
               </div>
-              <div class="photo-post__body">
-                <header class="photo-post__header">
-                  <span class="photo-post__author">Надежда</span>
-                  <span class="photo-post__time">(45 часов назад)</span>
+              <div class="post__body">
+                <header class="post__header">
+                  <span class="post__author">Надежда</span>
+                  <span class="post__time">(45 часов назад)</span>
                 </header>
-                <div class="photo-post__text">
+                <div class="post__text">
                   <p>Всем GM и взаимные лайки!</p>
                 </div>
-                <div class="photo-post__action">
-                  <button class="photo-post__like-btn" type="button">Мне нравится</button>
-                  <span class="photo-post__stats">
-                    <span class="photo-post__stats-name">Hравится:</span>
-                    <span class="photo-post__stats-count">2560</span>
+                <div class="post__action">
+                  <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
+                  <span class="post__stats">
+                    Hравится: <span class="post__stats-count">2560</span>
                   </span>
                 </div>
               </div>
@@ -211,39 +202,58 @@
                 <img src="img/photo-7-mobile@1x.jpg" alt="Загруженное изоражение" width="280" height="374">
               </figure>
               <div class="photo-editor__fields">
-                <div class="photo-editor__tabs">
-                  <div class="photo-editor__tabs-item">
-                    <label class="photo-editor__tool-name  photo-editor__tool-name--crop" for="crop">Обрезка</label>
-                  </div>
-                  <div class="photo-editor__tabs-item">
-                    <label class="photo-editor__tool-name  photo-editor__tool-name--color" for="color">Цветокоррекция</label>
-                  </div>
-                  <div class="photo-editor__tabs-item">
-                    <label class="photo-editor__tool-name  photo-editor__tool-name--brightness" for="brightness">Яркость</label>
-                  </div>
+                <div class="photo-editor__tools-wrapper">
+                  <ul class="photo-editor__tools">
+                    <li class="photo-editor__tool">
+                      <div class="photo-editor__tab">
+                        <span class="photo-editor__tool-name">
+                          <img src="img/icon-editor-crop.svg" alt="">
+                          Обрезка
+                        </span>
+                      </div>
+                      <div class="photo-editor__control">
+                        <div class="photo-editor__range">
+                          <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
+                          <div class="photo-editor__range-btn"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="photo-editor__tool">
+                      <div class="photo-editor__tab">
+                        <span class="photo-editor__tool-name">
+                          <img src="img/icon-editor-fill.svg" alt="">
+                          Цветокоррекция
+                        </span>
+                      </div>
+                      <div class="photo-editor__control">
+                        <div class="photo-editor__range">
+                          <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
+                          <div class="photo-editor__range-btn"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="photo-editor__tool">
+                      <div class="photo-editor__tab">
+                        <span class="photo-editor__tool-name">
+                          <img src="img/icon-editor-contrast.svg" alt="">
+                          Контраст
+                        </span>
+                      </div>
+                      <div class="photo-editor__control">
+                        <div class="photo-editor__range">
+                          <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
+                          <div class="photo-editor__range-btn"></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <div class="photo-editor__tools">
-                  <div class="photo-editor__tools-item">
-                    <div class="photo-editor__range">
-                      <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="margin-left: 0%; width: 84%"></div></div>
-                      <div class="photo-editor__range-btn"></div>
-                    </div>
+                <footer class="photo-editor__btns">
+                  <div class="photo-editor__btns-inner">
+                    <button class="photo-editor__upload-btn  btn  btn--upload" type="submit">Запостить</button>
+                    <button class="photo-editor__cancel-btn  btn  btn--cancel" type="reset">Отмена</button>
                   </div>
-                  <div class="photo-editor__tools-item">
-                    <div class="photo-editor__range">
-                      <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="margin-left: 0%; width: 84%"></div></div>
-                      <div class="photo-editor__range-btn"></div>
-                    </div>
-                  </div>
-                  <div class="photo-editor__tools-item">
-                    <div class="photo-editor__range">
-                      <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="margin-left: 0%; width: 84%"></div></div>
-                      <div class="photo-editor__range-btn"></div>
-                    </div>
-                  </div>
-                </div>
-                <button class="photo-editor__upload-btn  btn  btn--upload" type="submit">Запостить</button>
-                <button class="photo-editor__cancel-btn  btn  btn--cancel" type="reset">Отмена</button>
+                </footer>
               </div>
             </form>
           </div>

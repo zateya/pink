@@ -11,24 +11,48 @@
   padding-top: 91px;
   padding-bottom: 47px;
   @include angled-bg;
+
+  @media (min-width: $tablets) {
+    @include angled-bg(50px);
+    padding-top: 88px;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: $desktops) {
+    @include angled-bg(65px);
+    padding-top: 140px;
+    padding-bottom: 95px;
+  }
+}
+
+.rates__inner {
+  @media (min-width: $tablets) {
+    @include container;
+  }
 }
 
 .rates__table {
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  font-weight: 300;
   line-height: 30px;
+  transform: translateX(-50%);
   border-collapse: collapse;
+  width: 262.5%;
 
+  @media (min-width: $tablets) {
+    width: 100%;
+  }
+}
+
+.rates__features-header {
   @media (max-width: $phones-max) {
-    width: 262.5%;
+    display: none;
   }
 }
 
 .rates__header {
   position: relative;
-  min-width: 280px;
-  max-width: 280px;
   background-color: $blue-dark;
   color: $white;
   text-transform: uppercase;
@@ -36,6 +60,17 @@
   padding-top: 17px;
   border-right: 2px solid $grey;
   border-left: 2px solid $grey;
+
+  @media (min-width: $tablets) {
+    padding-top: 10px;
+    padding-bottom: 9px;
+    width: 25%;
+  }
+
+  @media (min-width: $desktops) {
+    padding: 20px;
+    padding-top: 17px;
+ }
 
   &:first-of-type {
     border-top-left-radius: 5px;
@@ -50,18 +85,43 @@
 
 .rates__item {
   position: relative;
-  text-transform: uppercase;
-  font-weight: 300;
-  background-color: $white;
-  border: 2px solid $grey;
   border-top: 0;
   padding-top: 16px;
   padding-right: 68px;
   padding-bottom: 13px;
   padding-left: 22px;
+  background-color: $white;
+  border: 2px solid $grey;
+  border-top-width: 0;
 
-  &:last-child {
-    border-right: 0;
+  @media (min-width: $tablets) {
+    padding: 9px 16px 8px;
+  }
+
+  @media (min-width: $desktops) {
+    padding: 16px 22px 13px;
+  }
+
+  &--feature-title {
+    border-top-width: 2px;
+
+    @media (max-width: $phones-max) {
+      display: none;
+    }
+  }
+}
+
+.rates__feature {
+  @media (min-width: $desktops) {
+    font-size: 18px;
+  }
+
+  &--name {
+    text-transform: uppercase;
+
+    @media (min-width: $tablets) {
+      @include visually-hidden;
+    }
   }
 }
 
@@ -71,12 +131,21 @@
   font-weight: 700;
   margin: 0;
   margin-bottom: 1px;
+
+  @media (min-width: $tablets) and (max-width: $tablets-max) {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
 }
 
 .rates__price {
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
+
+  @media (min-width: $tablets) and (max-width: $tablets-max) {
+    font-size: 18px;
+  }
 }
 
 .rates__flag {
@@ -91,6 +160,7 @@
 
 .rates__feature-status {
   position: absolute;
+  display: block;
   width: 31px;
   height: 30px;
   top: 13px;
@@ -98,4 +168,18 @@
   background-color: red;
   text-indent: -1000px;
   overflow: hidden;
+
+  @media (min-width: $tablets) {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.rates__pagination {
+  @media (min-width: $tablets) {
+    display: none;
+  }
 }

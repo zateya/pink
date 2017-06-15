@@ -1,0 +1,16 @@
+.like-btn {
+  width: 13px;
+  height: 12px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-indent: -1000px;
+  overflow: hidden;
+  background: url("../img/icon-heart.svg") no-repeat top left;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

@@ -1,0 +1,504 @@
+.form {
+  @media (min-width: $tablets) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-bottom: 0;
+  }
+}
+
+.form__body {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktops) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 34px 0 42px;
+  border: none;
+  position: relative;
+
+  @media (min-width: $tablets) {
+    position: relative;
+    border: 2px solid $grey;
+    border-radius: 2px;
+    padding: 0;
+    margin-bottom: 65px;
+  }
+
+  &--fullname {
+    @media (min-width: $tablets) {
+      order: -3;
+      padding: 0;
+      border: 0;
+    }
+
+    @media (min-width: $desktops) {
+      margin-top: 6px;
+      width: 436px;
+    }
+  }
+
+  &--apps {
+    background-color: $grey-light;
+
+    @media (min-width: $tablets) {
+      background-color: transparent;
+      order: -2;
+    }
+
+    @media (min-width: $desktops) {
+      width: 436px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $tablets) {
+      order: -1;
+    }
+
+    @media (min-width: $desktops) {
+      width: 100%;
+    }
+  }
+
+  &--achievements {
+    background-color: $grey-light;
+
+    @media (min-width: $tablets) {
+      background-color: transparent;
+    }
+
+    @media (min-width: $desktops) {
+      width: 100%;
+    }
+  }
+
+  &--emotions {
+    margin-bottom: 0;
+
+    @media (min-width: $desktops) {
+      width: 100%;
+    }
+  }
+}
+
+.form__fieldset-inner {
+  @media (max-width: $phones-max) {
+    @include container-phones(20px);
+  }
+}
+
+.form__legend {
+  display: block;
+  padding: 0 30px;
+  margin: 4px 0 16px;
+  width: 100%;
+  text-align: center;
+  color: $pink;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablets) {
+    padding: 0 32px;
+    margin: -1px auto 0;
+    width: auto;
+    background-color: $white;
+    transform: translateY(-50%);
+  }
+
+  &--contacts {
+    display: none;
+
+    @media (min-width: $tablets) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+  }
+}
+
+.form__text-fields {
+  &--contacts {
+    @media (min-width: $tablets) {
+      padding: 26px 58px 32px;
+    }
+
+    @media (min-width: $desktops) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.form__field-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  &--fullname {
+    @media (min-width: $tablets) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 54px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $desktops) {
+      width: 365px;
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__text-label {
+  margin-left: 23px;
+  text-transform: uppercase;
+  color: $pink;
+  line-height: 30px;
+
+  &--fullname {
+    @media (min-width: $tablets) {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $tablets) {
+      margin-left: 20px;
+      margin-top: 10px;
+      order: 2;
+    }
+  }
+}
+
+.form__text-label + .form__text-input {
+  margin-top: 5px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+  }
+}
+
+.form__text-input {
+  display: block;
+  padding:  15px 20px 14px;
+  width: 100%;
+  border: 2px solid $grey;
+  border-radius: 2px;
+  font-family: $font;
+  font-size: 18px;
+  line-height: 30px;
+  color: $font-color;
+  outline: none;
+
+  &:hover {
+    border-color: $blue-dark;
+  }
+
+  &:active {
+    border-color: $pink;
+  }
+
+  &::placeholder {
+    color: $font-color;
+    opacity: 1;
+  }
+}
+
+.form__checkbox-fields {
+  padding-top: 23px;
+
+  @media (min-width: $tablets) {
+    padding: 33px 58px 48px;
+  }
+
+  &--achievements {
+    @media (min-width: $desktops) {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+
+.form__field-checkbox {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 43px;
+  }
+}
+
+.form__checkbox-wrapper {
+  @media (max-width: $desktops) {
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+  }
+
+  @media (min-width: $desktops) {
+    flex-grow: 0;
+
+
+    &:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+}
+
+.form__checkbox-label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+  margin: 0;
+  line-height: 30px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 70px;
+  cursor: pointer;
+
+  @media (min-width: $tablets) {
+    padding-left: 59px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    background-color: $white;
+    border: 2px solid $grey;
+    border-radius: 2px;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    border-color: $blue-dark;
+  }
+
+  &:active::before {
+    border-color: $pink;
+  }
+}
+
+.form__checkbox-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 39px;
+  height: 39px;
+  z-index: 0;
+  outline: none;
+}
+
+.form__radio-fields {
+  padding-top: 20px;
+
+  @media (min-width: $tablets) {
+    padding: 33px 58px 48px;
+  }
+
+  &--apps {
+    @media (min-width: $desktops) {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+  }
+}
+
+.form__field-radio {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 36px;
+  }
+}
+
+.form__radio-label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+  margin: 0;
+  line-height: 30px;
+  padding-top: 5px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 70px;
+  cursor: pointer;
+
+  @media (min-width: $tablets) {
+    padding-left: 59px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 39px;
+    height: 39px;
+    background-color: $white;
+    border: 2px solid $grey;
+    z-index: 1;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $blue-dark;
+  }
+
+  &:active::before {
+    border-color: $pink;
+  }
+}
+
+.form__radio-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 39px;
+  height: 39px;
+  z-index: 0;
+  outline: none;
+}
+
+.form__radio-input:checked + .form__radio-label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  background-color: $pink;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.form__textarea-fields {
+  @media (min-width: $tablets) {
+    padding: 26px 58px 51px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 23px;
+    padding-bottom: 43px;
+  }
+}
+
+.form__textarea {
+  padding:  15px 20px 14px;
+  margin: 0;
+  display: block;
+  border: 2px solid $grey;
+  width: 100%;
+  border-radius: 2px;
+  font-family: $font;
+  font-size: 18px;
+  line-height: 30px;
+  color: $font-color;
+  outline: none;
+  resize: none;
+
+  &--emotions {
+    height: 201px;
+
+    @media (min-width: $tablets) {
+      height: 193px;
+    }
+
+    @media (min-width: $desktops) {
+      height: 128px;
+    }
+  }
+
+  &:hover {
+    border-color: $blue-dark;
+  }
+
+  &:active {
+    border-color: $pink;
+  }
+
+  &::placeholder {
+    color: $font-color;
+    opacity: 1;
+  }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+
+  @media (max-width: $phones-max) {
+    @include container-phones(20px);
+    text-align: center;
+  }
+
+  @media (min-width: $tablets) {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 67px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-top: 65px;
+  }
+}
+
+.form__submit-btn {
+  width: 100%;
+  flex-shrink: 0;
+  margin-right: 20px;
+
+  @media (min-width: $tablets) {
+    width: 300px;
+  }
+}
+
+.form__note {
+  line-height: 30px;
+  text-transform: uppercase;
+
+  @media (max-width: $phones-max) {
+    margin-top: 43px;
+  }
+
+  @media (min-width: $tablets) {
+    margin-left: auto;
+  }
+}
+
+.form__note-symbol {
+  color: $pink;
+}

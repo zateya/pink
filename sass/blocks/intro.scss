@@ -1,64 +1,112 @@
 .intro {
-  background-color: $blue-dark; /* opened menu & mobile only*/
+  background-color: $blue-dark;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   color: $white;
+  padding-top: 66px;
+
+  @media (min-width: $tablets) {
+    padding-top: 110px;
+  }
+
+  &--short {
+    @media (max-width: $tablets-max) {
+      padding-top: 0;
+      background-position: center -69px;
+    }
+  }
 }
 
 .intro__inner {
   @include container;
-}
-
-.intro--index {
-  padding-top: 175px;
-}
-
-.intro--index .intro__inner {
   position: relative;
 
-  &::before {
+  @media (min-width: $tablets) {
+    height: 100%;
+  }
+
+  &--index {
+    @media (max-width: $phones-max) {
+      width: auto;
+      padding: 0;
+    }
+
+    @media (min-width: $tablets) {
+      min-height: 619px;
+    }
+
+    @media (min-width: $desktops) {
+      min-height: 743px;
+    }
+  }
+
+  &--hero::before {
     content: '';
     display: block;
     position: relative;
     width: 320px;
-    height: 286px;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 396px;
     bottom: 0;
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: left bottom;
-  }
-}
 
-.intro--inner .intro__inner {
-  padding-top: 100px;
-  padding-bottom: 38px;
-  min-height: 237px;
+    @media (max-width: $phones-max) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $tablets) {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &--inner {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    min-height: 170px;
+
+    @media (min-width: $tablets) {
+      padding-top: 69px;
+      padding-bottom: 69px;
+      min-height: 330px;
+    }
+
+    @media (min-width: $desktops) {
+      min-height: 284px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+
+  &--gallery {
+    @media (min-width: $desktops) {
+      padding-left: 200px;
+      padding-right: 200px
+    }
+  }
+
+  &--contest {
+    @media (min-width: $desktops) {
+      padding-left: 90px;
+      padding-right: 90px
+    }
+  }
 }
 
 .intro__title {
   font-size: 24px;
-  line-height: 33px;
+  line-height: 30px;
   font-weight: 300;
   margin: 0;
   text-align: center;
-}
 
-@media (max-width: $phones-max) {
-  .intro--index .intro__inner {
-    padding: 0;
-    width: auto;
-  }
-}
-
-@media (max-width: $tablets-max) {
-  .intro--short {
-    background-position: center -67px;
-  }
-
-  .intro--index.intro--short {
-    padding-top: 109px;
+  @media (min-width: $tablets) {
+    font-size: 50px;
+    line-height: 60px;
   }
 }
