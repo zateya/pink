@@ -25,3 +25,15 @@
   width: 27px;
   height: 34px;
 }
+
+.copyright__academy {
+  fill: $pink;
+
+  &:hover {
+    fill: $blue-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
