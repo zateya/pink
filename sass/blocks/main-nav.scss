@@ -119,18 +119,6 @@
   }
 }
 
-.main-nav__trigger:hover span,
-.main-nav__trigger:hover span::before,
-.main-nav__trigger:hover span::after {
-  background-color: $pink;
-}
-
-.main-nav__trigger:active span,
-.main-nav__trigger:active span::before,
-.main-nav__trigger:active span::after {
-  background: rgba($pink, 0.3);
-}
-
 .main-nav--closed .main-nav__trigger span {
   display: block;
   width: 50px;
@@ -178,6 +166,18 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.main-nav__trigger:hover span,
+.main-nav__trigger:hover span::before,
+.main-nav__trigger:hover span::after {
+  background-color: $pink;
+}
+
+.main-nav__trigger:active span,
+.main-nav__trigger:active span::before,
+.main-nav__trigger:active span::after {
+  background: rgba($pink, 0.3);
 }
 
 @media (max-width: $tablets-max) {
