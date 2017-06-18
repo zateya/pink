@@ -43,16 +43,16 @@
                 <div class="form__fieldset-inner">
                   <div class="form__text-fields  form__text-fields--fullname">
                     <div class="form__field-text  form__field-text--fullname">
-                      <label class="form__text-label  form__text-label--fullname" for="user-last-name">Фамилия</label>
-                      <input class="form__text-input  form__text-input--fullname" id="user-last-name" type="text" name="Фамилия" placeholder="Укажите фамилию *">
+                      <label class="form__text-label  form__text-label--fullname" for="user-last-name">Фамилия:</label>
+                      <input class="form__text-input  form__text-input--last-name" id="user-last-name" type="text" name="Фамилия" placeholder="Укажите фамилию *">
                     </div>
                     <div class="form__field-text  form__field-text--fullname">
-                      <label class="form__text-label  form__text-label--fullname" for="user-first-name">Имя</label>
-                      <input class="form__text-input  form__text-input--fullname" id="user-first-name" type="text" name="Имя" placeholder="Введите ваше имя *">
+                      <label class="form__text-label  form__text-label--fullname" for="user-first-name">Имя:</label>
+                      <input class="form__text-input  form__text-input--first-name" id="user-first-name" type="text" name="Имя" placeholder="Введите ваше имя *">
                     </div>
                     <div class="form__field-text  form__field-text--fullname">
-                      <label class="form__text-label  form__text-label--fullname" for="user-middle-name">Отчество</label>
-                      <input class="form__text-input  form__text-input--fullname" id="user-middle-name" type="text" name="Отчество" placeholder="Ну и отчество тоже">
+                      <label class="form__text-label  form__text-label--fullname" for="user-middle-name">Отчество:</label>
+                      <input class="form__text-input  form__text-input--middle-name" id="user-middle-name" type="text" name="Отчество" placeholder="Ну и отчество тоже">
                     </div>
                   </div>
                 </div>
@@ -111,7 +111,7 @@
               </fieldset>
               <fieldset class="form__fieldset  form__fieldset--apps">
                 <div class="form__fieldset-inner">
-                  <legend class="form__legend">С каким приложением путешествовали?</legend>
+                  <legend class="form__legend  form__legend--apps">С каким приложением путешествовали?</legend>
                   <div class="form__radio-fields  form__radio-fields--apps">
                     <div class="form__field-radio">
                       <input class="form__radio-input" type="radio" id="ios" name="Приложение" value="Pink для iOS" checked>
@@ -130,7 +130,7 @@
               </fieldset>
               <fieldset class="form__fieldset  form__fieldset--emotions">
                 <div class="form__fieldset-inner">
-                  <legend class="form__legend">Опишите свои эмоции</legend>
+                  <legend class="form__legend  form__legend--emotions">Опишите свои эмоции</legend>
                   <div class="form__textarea-fields  form__textarea-fields--emotions">
                     <textarea class="form__textarea  form__textarea--emotions" name="Сообщение" rows="8" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                   </div>
@@ -139,7 +139,7 @@
             </div>
             <footer class="form__footer">
               <button class="form__submit-btn  btn  btn--submit" type="submit">Отправить форму</button>
-              <div class="form__note"><sup class="form__note-symbol">*</sup> — обязательные поля</div>
+              <div class="form__note"><span class="form__note-symbol">*</span> — обязательные <span class="form__note-purpose">для заполнения</span> поля</div>
             </footer>
           </form>
         </div>
@@ -162,6 +162,29 @@
         </a>
       </div>
     </footer>
+    <div class="popup  popup--error" style="display:none">
+      <div class="popup__body  popup__body--error">
+        <div class="popup__title">Что-то пошло не&nbsp;так!</div>
+        <div class="popup__text">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </div>
+      </div>
+      <footer class="popup__footer  popup__footer--error">
+        <button class="popup__btn  btn  btn--submit" type="button">ок</button>
+      </footer>
+    </div>
+    <div class="popup  popup--success" style="display:none">
+      <div class="popup__body  popup__body--success">
+        <div class="popup__title">Ваша заявка отправлена</div>
+        <div class="popup__text">
+          Спасибо за ваше участие, ваша заявка уже поступила к нам.
+          В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.
+        </div>
+      </div>
+      <footer class="popup__footer  popup__footer--success">
+        <button class="popup__btn  btn  btn--submit" type="button">Закрыть окно</button>
+      </footer>
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

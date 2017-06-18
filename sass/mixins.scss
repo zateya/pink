@@ -25,20 +25,18 @@
   }
 }
 
-@mixin angled-bg($height: 25px, $bgcolor: $grey-light) {
-  overflow-x: hidden;
+@mixin angled-bg($height: 25px, $top: 0) {
+  overflow: hidden;
 
   &::before {
     content: "";
-    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: $top;
     width: 100%;
-    height: $height;
-    border-top: $height solid $white;
-    border-right: 100vw solid $bgcolor;
-    border-left: none;
+    height: 100%;
+    background: $grey-light url(../img/bg-triangle-white.svg) no-repeat center top;
+    background-size: 100% $height;
+    z-index: 0;
   }
 }
 

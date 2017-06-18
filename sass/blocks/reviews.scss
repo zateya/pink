@@ -1,14 +1,16 @@
 .reviews {
-  padding-top: 48px;
-  padding-bottom: 43px;
+  padding-top: 46px;
+  padding-bottom: 36px;
 
   @media (min-width: $tablets) {
-    padding-top: 104px;
+    padding-top: 100px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $desktops) {
     position: relative;
-    padding-top: 191px;
+    padding-top: 185px;
+    padding-bottom: 47px;
 
     &::before {
       content: "";
@@ -29,7 +31,7 @@
 
 .reviews__title {
   font-size: 24px;
-  line-height: 33px;
+  line-height: 30px;
   font-weight: 300;
   text-align: center;
 }
@@ -56,11 +58,11 @@
 }
 
 .reviews__client {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 
   @media (min-width: $tablets) {
     order: 2;
-    margin-top: 42px;
+    margin-top: 36px;
     margin-bottom: 0;
   }
 }
@@ -91,13 +93,11 @@
   @media (min-width: $desktops) {
     font-size: 18px;
     line-height: 30px;
-    margin-top: 5px;
+    margin-top: 3px;
   }
 }
 
-.reviews__item p {
-  margin: 0;
-
+.reviews__text {
   @media (min-width: $tablets) {
     font-size: 18px;
     line-height: 30px;
@@ -110,9 +110,10 @@
   @media (min-width: $desktops) {
     display: block;
     position: absolute;
-    top: 22px;
+    top: 28px;
     width: 22px;
     border: none;
+    padding: 0;
     height: 41px;
     text-indent: -1000px;
     overflow: hidden;
@@ -130,6 +131,8 @@
 }
 
 .reviews__pagination {
+  margin-top: 28px;
+
   @media (min-width: $desktops) {
     display: none;
   }

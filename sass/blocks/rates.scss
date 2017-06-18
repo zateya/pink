@@ -1,6 +1,6 @@
 .rates__title {
   font-size: 24px;
-  line-height: 33px;
+  line-height: 30px;
   font-weight: 300;
   text-align: center;
 }
@@ -9,17 +9,17 @@
   position: relative;
   background-color: $grey-light;
   padding-top: 91px;
-  padding-bottom: 47px;
+  padding-bottom: 42px;
   @include angled-bg;
 
   @media (min-width: $tablets) {
-    @include angled-bg(50px);
+    @include angled-bg($height: 50px);
     padding-top: 88px;
     padding-bottom: 68px;
   }
 
   @media (min-width: $desktops) {
-    @include angled-bg(65px);
+    @include angled-bg($height: 65px);
     padding-top: 140px;
     padding-bottom: 95px;
   }
@@ -95,11 +95,11 @@
   border-top-width: 0;
 
   @media (min-width: $tablets) {
-    padding: 9px 16px 8px;
+    padding: 7px 16px 8px;
   }
 
   @media (min-width: $desktops) {
-    padding: 16px 22px 13px;
+    padding: 13px 22px 14px;
   }
 
   &--feature-title {
@@ -179,6 +179,8 @@
 }
 
 .rates__pagination {
+  margin-top: 33px;
+
   @media (min-width: $tablets) {
     display: none;
   }
