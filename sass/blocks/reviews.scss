@@ -58,12 +58,8 @@
 }
 
 .reviews__client {
-  margin-bottom: 14px;
-
   @media (min-width: $tablets) {
     order: 2;
-    margin-top: 36px;
-    margin-bottom: 0;
   }
 }
 
@@ -98,7 +94,22 @@
 }
 
 .reviews__text {
+  margin-top: 14px;
+  margin-bottom: 0;
+
+  @media (max-width: $tablets-max) {
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+
   @media (min-width: $tablets) {
+    margin-top: 0;
+    margin-bottom: 36px;
     font-size: 18px;
     line-height: 30px;
   }

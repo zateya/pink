@@ -26,7 +26,6 @@
 }
 
 @mixin angled-bg($height: 25px, $top: 0) {
-  overflow: hidden;
 
   &::before {
     content: "";
