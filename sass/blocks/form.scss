@@ -103,7 +103,6 @@
 }
 
 .form__legend {
-  display: block;
   padding: 0 30px;
   margin: 4px 0 16px;
   width: 100%;
@@ -111,6 +110,10 @@
   color: $pink;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (max-width: $phones-max) {
+    display: block;
+  }
 
   @media (min-width: $tablets) {
     padding: 0 32px;
@@ -121,10 +124,8 @@
   }
 
   &--contacts {
-    display: none;
-
-    @media (min-width: $tablets) {
-      display: block;
+    @media (max-width: $phones-max) {
+      display: none;
     }
   }
 
