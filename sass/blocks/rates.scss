@@ -1,6 +1,6 @@
 .rates__title {
   font-size: 24px;
-  line-height: 33px;
+  line-height: 30px;
   font-weight: 300;
   text-align: center;
 }
@@ -9,17 +9,18 @@
   position: relative;
   background-color: $grey-light;
   padding-top: 91px;
-  padding-bottom: 47px;
+  padding-bottom: 42px;
   @include angled-bg;
+  overflow: hidden;
 
   @media (min-width: $tablets) {
-    @include angled-bg(50px);
+    @include angled-bg($height: 50px);
     padding-top: 88px;
     padding-bottom: 68px;
   }
 
   @media (min-width: $desktops) {
-    @include angled-bg(65px);
+    @include angled-bg($height: 65px);
     padding-top: 140px;
     padding-bottom: 95px;
   }
@@ -58,8 +59,7 @@
   text-transform: uppercase;
   padding: 20px;
   padding-top: 17px;
-  border-right: 2px solid $grey;
-  border-left: 2px solid $grey;
+  background-clip: padding-box;
 
   @media (min-width: $tablets) {
     padding-top: 10px;
@@ -73,13 +73,60 @@
   }
 
   &:first-of-type {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
   }
 
   &:last-of-type {
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  &--flag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background: url(../img/bg-hit.svg) no-repeat top left;
+    background-size: 74px 73px;
+
+    @media (min-width: $tablets) and (max-width: $tablets-max) {
+      width: 61px;
+      height: 61px;
+      background: url(../img/bg-hit-tablet.svg) no-repeat top left;
+      background-size: 61px 61px;
+    }
+
+    @media (min-width: $tablets) {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.rates__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 73px;
+  transform: rotate(-45deg);
+  top: 4px;
+  font-weight: 400;
+
+  @media (min-width: $tablets) {
+    top: 0;
+    width: 61px;
+    height: 61px;
+  }
+
+  @media (min-width: $desktops) {
+    top: 5px;
+    left: 2px;
+    width: 78px;
+    height: 73px;
   }
 }
 
@@ -93,13 +140,14 @@
   background-color: $white;
   border: 2px solid $grey;
   border-top-width: 0;
+  background-clip: padding-box;
 
   @media (min-width: $tablets) {
-    padding: 9px 16px 8px;
+    padding: 7px 16px 8px;
   }
 
   @media (min-width: $desktops) {
-    padding: 16px 22px 13px;
+    padding: 13px 22px 14px;
   }
 
   &--feature-title {
@@ -148,16 +196,6 @@
   }
 }
 
-.rates__flag {
-  position: absolute;
-  top: 0;
-  left: -2px;
-  width: 78px;
-  height: 73px;
-  text-indent: -1000px;
-  overflow: hidden;
-}
-
 .rates__feature-status {
   position: absolute;
   display: block;
@@ -165,7 +203,6 @@
   height: 30px;
   top: 13px;
   right: 17px;
-  background-color: red;
   text-indent: -1000px;
   overflow: hidden;
 
@@ -176,9 +213,21 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  &--on {
+    background: url("../img/icon-yes.svg") no-repeat center;
+    background-size: 31px 21px;
+  }
+
+  &--off {
+    background: url("../img/icon-no.svg") no-repeat center;
+    background-size: 27px 26px;
+  }
 }
 
 .rates__pagination {
+  margin-top: 33px;
+
   @media (min-width: $tablets) {
     display: none;
   }

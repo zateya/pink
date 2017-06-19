@@ -16,12 +16,9 @@
 }
 
 .photo-editor__form {
-  padding-bottom: 40px;
 
   @media (min-width: $tablets) {
     display: flex;
-    padding-top: 38px;
-    padding-bottom: 54px;
   }
 
   @media (min-width: $desktops) {
@@ -40,8 +37,13 @@
   }
 
   @media (min-width: $tablets) {
-    padding-top: 17px;
     width: 300px;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-bottom: 57px;
   }
 }
 
@@ -51,20 +53,25 @@
 
   @media (min-width: $tablets) {
     width: 300px;
+    height: 400px;
   }
 }
 
 .photo-editor__fields {
   display: flex;
   flex-direction: column;
+  padding-bottom: 41px;
 
   @media (min-width: $tablets) {
+    padding-top: 40px;
+    padding-bottom: 54px;
     margin-left: 45px;
     width: 275px;
     flex-grow: 1;
   }
 
   @media (min-width: $desktops) {
+    padding-bottom: 57px;
     margin-left: 90px;
   }
 }
@@ -98,13 +105,34 @@
   }
 
   @media (min-width: $tablets) {
-    display: table-row;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 -1px $grey-darker;
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 12px;
+    padding-bottom: 13px;
+  }
+
+  &--contrast {
+    @media (min-width: $tablets) {
+      padding-top: 22px;
+      padding-bottom: 24px;
+    }
+
+    @media (min-width: $desktops) {
+      padding-top: 10px;
+      padding-bottom: 12px;
+    }
   }
 }
 
 .photo-editor__tab {
-  margin-left: 16px;
-  margin-right: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   @media (max-width: $phones-max) {
     display: inline-block;
@@ -112,11 +140,8 @@
   }
 
   @media (min-width: $tablets) {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 2px;
-    padding-right: 0;
-    border-bottom: 1px solid $grey-darker;
+    padding-left: 3px;
+    padding-right: 1px;
   }
 
   @media (min-width: $desktops) {
@@ -138,10 +163,6 @@
 }
 
 .photo-editor__control {
-  display: table-cell;
-  vertical-align: middle;
-  height: 72px;
-
   @media (max-width: $phones-max) {
     position: absolute;
     left: 0;
@@ -156,7 +177,6 @@
     padding-left: 27px;
     padding-right: 18px;
     width: 100%;
-    border-bottom: 1px solid $grey-darker;
   }
 
   @media (min-width: $desktops) {

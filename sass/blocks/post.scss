@@ -1,4 +1,52 @@
+.post {
+  &--panorama {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablets) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktops) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &--card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 280px;
+    min-height: 301px;
+
+    @media (min-width: $tablets) {
+      width: 300px;
+      min-height: 455px;
+      margin-right: 20px;
+    }
+
+    @media (min-width: $tablets) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $desktops) {
+      min-height: 555px;
+      margin-bottom: 54px;
+
+      &:nth-child(2n) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .post__panorama {
+  display: block;
   position: relative;
   overflow: hidden;
 
@@ -56,33 +104,9 @@
   padding: 6px 20px;
 }
 
-.post--card {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  width: 280px;
-
-  @media (min-width: $tablets) {
-    width: 300px;
-    margin-right: 20px;
-  }
-
-  @media (min-width: $tablets) and (max-width: $tablets-max) {
-    &:nth-child(2n) {
-      margin-right: 0;
-    }
-  }
-
-  @media (min-width: $desktops) {
-    margin-top: 40px;
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
-}
-
 .post__image {
+  display: block;
+
   @media (min-width: $tablets) {
     overflow: hidden;
   }
@@ -113,8 +137,27 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 17px 22px 26px;
+  padding: 18px 18px 19px;
   background-color: $grey-light;
+
+  @media (min-width: $tablets) {
+    padding-top: 24px;
+    padding-right: 32px;
+    padding-bottom: 22px;
+    padding-left: 28px;
+  }
+
+  @media (min-width: $tablets) {
+    padding-right: 31px;
+  }
+
+  &--panorama {
+    position: relative;
+
+    @media (min-width: $tablets) {
+      padding-bottom: 24px;
+    }
+  }
 }
 
 .post__author {
@@ -127,26 +170,59 @@
 }
 
 .post__time {
+  display: inline-block;
+  vertical-align: top;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 300;
 }
 
 .post__action {
-  font-size: 0;
-  margin-top: 18px;
   position: relative;
+  margin-top: 10px;
+  padding-left: 31px;
+
+  @media (min-width: $tablets) {
+    margin-top: 12px;
+    padding-left: 0;
+  }
+
+  &--panorama {
+    margin-top: 10px;
+
+    @media (min-width: $tablets) {
+      position: absolute;
+      top: 0;
+      right: 29px;
+      padding-right: 30px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: $desktops) {
+      right: 31px;
+    }
+  }
 }
 
 .post__stats {
-  display: inline-block;
-  vertical-align: top;
   font-size: 12px;
+  line-height: 24px;
   text-transform: uppercase;
   color: $pink;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .post__like-btn {
-  display: inline;
-  margin-right: 18px;
+  position: absolute;
+  top: 6px;
+  left: 0;
+
+  @media (min-width: $tablets) {
+    right: 0;
+    left: auto;
+  }
 }

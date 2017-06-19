@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <svg style="display: none">
+      <symbol viewBox="0 0 26.943 34.09" id="academy-logo">
+        <path d="M13.62.017L13.472 0 0 1.412v24.66l13.472 8.018 13.43-7.99.042-.026V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.547-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.012 1.414 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.032-1.787-.012 1.413 1.852 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.016 1.045-7.94-4.728-.015 1.416 7.98 4.796.016 1.076-7.97-4.74-.014 1.414 8.02 4.82.046.027 8.143-4.872v-1.267l-.01-.148v-3.76l3.414-2.037v10.02L13.47 31.85 1.925 24.98v-9.853z"/>
+      </symbol>
+      <symbol viewBox="0 0 17.5 14.663" id="twitter-icon">
+        <path d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+      </symbol>
+      <symbol viewBox="0 0 8.673 18.944" id="facebook-icon">
+        <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+      </symbol>
+      <symbol viewBox="0 0 14.64 13.96" id="youtube-icon">
+        <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+      </symbol>
+    </svg>
     <header class="page-header  page-header--full">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
@@ -43,16 +57,16 @@
                 <div class="form__fieldset-inner">
                   <div class="form__text-fields  form__text-fields--fullname">
                     <div class="form__field-text  form__field-text--fullname">
-                      <label class="form__text-label  form__text-label--fullname" for="user-last-name">Фамилия</label>
-                      <input class="form__text-input  form__text-input--fullname" id="user-last-name" type="text" name="Фамилия" placeholder="Укажите фамилию *">
+                      <label class="form__text-label  form__text-label--fullname" for="user-last-name">Фамилия:</label>
+                      <input class="form__text-input  form__text-input--last-name" id="user-last-name" type="text" name="Фамилия" placeholder="Укажите фамилию *">
                     </div>
                     <div class="form__field-text  form__field-text--fullname">
-                      <label class="form__text-label  form__text-label--fullname" for="user-first-name">Имя</label>
-                      <input class="form__text-input  form__text-input--fullname" id="user-first-name" type="text" name="Имя" placeholder="Введите ваше имя *">
+                      <label class="form__text-label  form__text-label--fullname" for="user-first-name">Имя:</label>
+                      <input class="form__text-input  form__text-input--first-name" id="user-first-name" type="text" name="Имя" placeholder="Введите ваше имя *">
                     </div>
                     <div class="form__field-text  form__field-text--fullname">
-                      <label class="form__text-label  form__text-label--fullname" for="user-middle-name">Отчество</label>
-                      <input class="form__text-input  form__text-input--fullname" id="user-middle-name" type="text" name="Отчество" placeholder="Ну и отчество тоже">
+                      <label class="form__text-label  form__text-label--fullname" for="user-middle-name">Отчество:</label>
+                      <input class="form__text-input  form__text-input--middle-name" id="user-middle-name" type="text" name="Отчество" placeholder="Ну и отчество тоже">
                     </div>
                   </div>
                 </div>
@@ -111,7 +125,7 @@
               </fieldset>
               <fieldset class="form__fieldset  form__fieldset--apps">
                 <div class="form__fieldset-inner">
-                  <legend class="form__legend">С каким приложением путешествовали?</legend>
+                  <legend class="form__legend  form__legend--apps">С каким приложением путешествовали?</legend>
                   <div class="form__radio-fields  form__radio-fields--apps">
                     <div class="form__field-radio">
                       <input class="form__radio-input" type="radio" id="ios" name="Приложение" value="Pink для iOS" checked>
@@ -130,7 +144,7 @@
               </fieldset>
               <fieldset class="form__fieldset  form__fieldset--emotions">
                 <div class="form__fieldset-inner">
-                  <legend class="form__legend">Опишите свои эмоции</legend>
+                  <legend class="form__legend  form__legend--emotions">Опишите свои эмоции</legend>
                   <div class="form__textarea-fields  form__textarea-fields--emotions">
                     <textarea class="form__textarea  form__textarea--emotions" name="Сообщение" rows="8" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                   </div>
@@ -139,7 +153,7 @@
             </div>
             <footer class="form__footer">
               <button class="form__submit-btn  btn  btn--submit" type="submit">Отправить форму</button>
-              <div class="form__note"><sup class="form__note-symbol">*</sup> — обязательные поля</div>
+              <div class="form__note"><span class="form__note-symbol">*</span> — обязательные <span class="form__note-purpose">для заполнения</span> поля</div>
             </footer>
           </form>
         </div>
@@ -150,18 +164,55 @@
         <img src="img/logo-pink-blue-mobile.svg" alt="Pink" width="147" height="40">
       </a>
       <div class="page-footer__social  social">
-        <a class="social__link  social__link--twitter" href="#">Twitter</a>
-        <a class="social__link  social__link--facebook" href="#">Facebook</a>
-        <a class="social__link  social__link--youtube" href="#">Youtube</a>
+        <a class="social__link  social__link--twitter" href="#">
+          <svg class="social__icon  social__icon--twitter" width="18" height="15" title="Twitter">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-icon"></use>
+          </svg>
+        </a>
+        <a class="social__link  social__link--facebook" href="#">
+          <svg class="social__icon  social__icon--facebook" width="9" height="19" title="Facebook">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-icon"></use>
+          </svg>
+        </a>
+        <a class="social__link  social__link--youtube" href="#">
+          <svg class="social__icon  social__icon--youtube" width="15" height="14" title="Youtube">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#youtube-icon"></use>
+          </svg>
+        </a>
       </div>
       <div class="page-footer__copyright  copyright">
         <span class="copyright__develop-txt">Разработано</span>
         <a class="copyright__owner" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           HTML Academy
-          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+          <svg class="copyright__academy" width="27" height="34">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#academy-logo"></use>
+          </svg>
         </a>
       </div>
     </footer>
+    <div class="popup  popup--error" style="display:none">
+      <div class="popup__body  popup__body--error">
+        <div class="popup__title">Что-то пошло не&nbsp;так!</div>
+        <div class="popup__text">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+        </div>
+      </div>
+      <footer class="popup__footer  popup__footer--error">
+        <button class="popup__btn  btn  btn--submit" type="button">ок</button>
+      </footer>
+    </div>
+    <div class="popup  popup--success" style="display:none">
+      <div class="popup__body  popup__body--success">
+        <div class="popup__title">Ваша заявка отправлена</div>
+        <div class="popup__text">
+          Спасибо за ваше участие, ваша заявка уже поступила к нам.
+          В ближайшее время мы рассмотрим ее и оповестим&nbsp;вас.
+        </div>
+      </div>
+      <footer class="popup__footer  popup__footer--success">
+        <button class="popup__btn  btn  btn--submit" type="button">Закрыть окно</button>
+      </footer>
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

@@ -1,13 +1,12 @@
 .advantages {
-  padding-top: 43px;
+  padding-top: 39px;
 
   @media (min-width: $tablets) {
     padding-top: 50px;
   }
 
   @media (min-width: $desktops) {
-    padding-top: 69px;
-    overflow-x: hidden;
+    padding-top: 68px;
   }
 }
 
@@ -20,13 +19,13 @@
   }
 
   @media (min-width: $desktops) {
-    margin-bottom: 73px;
+    margin-bottom: 0;
   }
 }
 
 .advantages__title {
   font-size: 24px;
-  line-height: 33px;
+  line-height: 30px;
   font-weight: 300;
   margin: 0;
   text-align: center;
@@ -44,7 +43,7 @@
 
 .advantages__subtitle {
   display: block;
-  margin-top: 11px;
+  margin-top: 27px;
 
   @media (min-width: $tablets) {
     margin-top: 0;
@@ -59,20 +58,18 @@
 }
 
 .advantages__wrapper {
-  @include angled-bg($height: 31px);
+  @include angled-bg ($height: 31px, $top: 0);
   position: relative;
-  background-color: $grey-light;
-  padding-top: 86px;
+  padding-top: 80px;
 
   @media (min-width: $tablets) {
-    @include angled-bg($height: 50px);
+    @include angled-bg ($height: 51px, $top: 0);
     padding-top: 0;
   }
 
   @media (min-width: $desktops) {
-    @include angled-bg($height: 73px);
-    margin-top: 12px;
-    overflow: visible;
+    @include angled-bg ($height: 74px, $top: 87px);
+    padding-top: 75px;
   }
 }
 
@@ -81,7 +78,7 @@
   text-align: center;
 
   @media (min-width: $tablets) {
-    padding-top: 72px;
+    padding-top: 75px;
   }
 
   @media (min-width: $desktops) {
@@ -98,13 +95,14 @@
   @media (min-width: $tablets) {
     padding-left: 50%;
     text-align: left;
-    padding-bottom: 45px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: $desktops) {
     flex-direction: row;
     padding: 0;
     text-align: center;
+    top: 12px;
   }
 
   &::after {
@@ -116,7 +114,7 @@
     width: 158px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 43px;
+    margin-top: 40px;
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center top;
@@ -135,7 +133,11 @@
 }
 
 .advantages__item {
-  margin-bottom: 40px;
+  margin-bottom: 29px;
+
+  @media (min-width: $tablets) {
+    margin-bottom: 33px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -144,20 +146,15 @@
   @media (min-width: $desktops) {
     position: relative;
     width: 300px;
-    padding-top: 357px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 357px 30px 67px;
     margin-right: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 0;
     font-size: 18px;
     line-height: 30px;
+    top: -12px;
 
     &:nth-child(3n) {
       margin-right: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 70px;
     }
 
     &::before {
@@ -167,12 +164,16 @@
       width: 186px;
       height: 302px;
       left: 50%;
-      top: -12px;
+      top: 0px;
       transform: translateX(-50%);
       background-color: $pink;
       z-index: 2;
     }
   }
+}
+
+.advantages__item p {
+  margin: 0;
 }
 
 .advantages__name {
@@ -181,39 +182,35 @@
   font-weight: 700;
   color: $black;
   margin-top: 0;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablets) {
+    margin-bottom: 13px;
+  }
 
   @media (min-width: $desktops) {
     font-size: 30px;
     line-height: 30px;
-    margin-bottom: 25px;
-  }
-}
-
-.advantages__item p {
-  margin-top: 17px;
-  margin-bottom: 0;
-
-  @media (min-width: $desktops) {
-    margin-top: 25px;
+    margin-bottom: 24px;
   }
 }
 
 .advantages__research {
+
   @media (max-width: $phones-max) {
     @include visually-hidden;
   }
 
   @media (min-width: $tablets) {
-    padding-top: 59px;
+    padding-top: 60px;
     min-height: 335px;
   }
 
   @media (min-width: $desktops) {
     background-color: $grey-light;
     padding-top: 0px;
-    padding-bottom: 67px;
-    min-height: 410px;
+    padding-bottom: 68px;
+    min-height: 412px;
   }
 }
 
@@ -229,7 +226,9 @@
   padding-top: 40px;
 
   @media (min-width: $desktops) {
+    padding-top: 91px;
     padding-left: 366px;
+    padding-right: 40px;
     font-size: 18px;
     line-height: 30px;
   }
@@ -254,7 +253,7 @@
 
 .advantages__research-lead p {
   margin-top: 0;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 
   @media (min-width: $desktops) {
     margin-bottom: 30px;
@@ -267,12 +266,13 @@
   line-height: 36px;
   color: $black;
 
-  @media (min-width: $tablets) and (max-width: $tablets-max) {
-    width: 175px;
+  @media (min-width: $tablets) {
+    max-width: 175px;
   }
 
   @media (min-width: $desktops) {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    max-width: inherit;
   }
 }
 

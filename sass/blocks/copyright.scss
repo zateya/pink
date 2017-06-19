@@ -5,7 +5,17 @@
 .copyright__develop-txt {
   font-size: $font-size;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+
+  @media (min-width: $tablets) {
+    padding-top: 3px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 5px;
+    font-size: 18px;
+    line-height: 18px;
+  }
 }
 
 .copyright__owner {
@@ -14,4 +24,16 @@
   margin-left: 14px;
   width: 27px;
   height: 34px;
+}
+
+.copyright__academy {
+  fill: $pink;
+
+  &:hover {
+    fill: $blue-dark;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <svg style="display: none">
+      <symbol viewBox="0 0 26.943 34.09" id="academy-logo">
+        <path d="M13.62.017L13.472 0 0 1.412v24.66l13.472 8.018 13.43-7.99.042-.026V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.547-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.012 1.414 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.032-1.787-.012 1.413 1.852 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.016 1.045-7.94-4.728-.015 1.416 7.98 4.796.016 1.076-7.97-4.74-.014 1.414 8.02 4.82.046.027 8.143-4.872v-1.267l-.01-.148v-3.76l3.414-2.037v10.02L13.47 31.85 1.925 24.98v-9.853z"/>
+      </symbol>
+      <symbol viewBox="0 0 17.5 14.663" id="twitter-icon">
+        <path d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+      </symbol>
+      <symbol viewBox="0 0 8.673 18.944" id="facebook-icon">
+        <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+      </symbol>
+      <symbol viewBox="0 0 14.64 13.96" id="youtube-icon">
+        <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+      </symbol>
+    </svg>
     <header class="page-header  page-header--full">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
@@ -36,17 +50,17 @@
             Видите, как не хватает ваших?
           </p>
         </div>
-        <article class="post">
-          <div class="post__panorama">
+        <article class="post  post--panorama">
+          <a class="post__panorama" href="#">
             <img src="img/panorama-mobile@1x.jpg" alt="Анна" width="320" height="137">
             <div class="post__rubric-wrapper">
               <div class="post__rubric-inner">
                 <span class="post__rubric-title">Панорама дня</span>
               </div>
             </div>
-          </div>
+          </a>
           <div class="post__body-wrapper">
-            <div class="post__body  post__body--stats-ontop">
+            <div class="post__body  post__body--panorama">
               <header class="post__header">
                 <span class="post__author">Анна</span>
                 <span class="post__time">(5 минут назад)</span>
@@ -54,11 +68,11 @@
               <div class="post__text">
                 <p>Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               </div>
-              <div class="post__action">
+              <div class="post__action  post__action--panorama">
                 <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                <span class="post__stats">
+                <a class="post__stats" href="#">
                   Hравится: <span class="post__stats-count">215</span>
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -66,9 +80,9 @@
         <div class="gallery__inner">
           <div class="post-list">
             <article class="post  post--card">
-              <div class="post__image">
+              <a class="post__image" href="#">
                 <img src="img/photo-1-mobile@1x.jpg" alt="Левон" width="280" height="180">
-              </div>
+              </a>
               <div class="post__body">
                 <header class="post__header">
                   <span class="post__author">Левон</span>
@@ -79,16 +93,16 @@
                 </div>
                 <div class="post__action">
                   <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                  <span class="post__stats">
+                  <a class="post__stats" href="#">
                     Hравится: <span class="post__stats-count">356</span>
-                  </span>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="post  post--card">
-              <div class="post__image">
+              <a class="post__image" href="#">
                 <img src="img/photo-2-mobile@1x.jpg" alt="Антон" width="280" height="180">
-              </div>
+              </a>
               <div class="post__body">
                 <header class="post__header">
                   <span class="post__author">Антон</span>
@@ -99,16 +113,16 @@
                 </div>
                 <div class="post__action">
                   <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                  <span class="post__stats">
+                  <a class="post__stats" href="#">
                     Hравится: <span class="post__stats-count">666</span>
-                  </span>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="post  post--card">
-              <div class="post__image">
+              <a class="post__image" href="#">
                 <img src="img/photo-3-mobile@1x.jpg" alt="Антон" width="280" height="180">
-              </div>
+              </a>
               <div class="post__body">
                 <header class="post__header">
                   <span class="post__author">Борис</span>
@@ -119,16 +133,16 @@
                 </div>
                 <div class="post__action">
                   <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                  <span class="post__stats">
+                  <a class="post__stats" href="#">
                     Hравится: <span class="post__stats-count">215</span>
-                  </span>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="post  post--card">
-              <div class="post__image">
+              <a class="post__image" href="#">
                 <img src="img/photo-4-mobile@1x.jpg" alt="Антон" width="280" height="180">
-              </div>
+              </a>
               <div class="post__body">
                 <header class="post__header">
                   <span class="post__author">Сергей</span>
@@ -139,16 +153,16 @@
                 </div>
                 <div class="post__action">
                   <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                  <span class="post__stats">
+                  <a class="post__stats" href="#">
                     Hравится: <span class="post__stats-count">4</span>
-                  </span>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="post  post--card">
-              <div class="post__image">
+              <a class="post__image" href="#">
                 <img src="img/photo-5-mobile@1x.jpg" alt="Максим" width="280" height="180">
-              </div>
+              </a>
               <div class="post__body">
                 <header class="post__header">
                   <span class="post__author">Максим</span>
@@ -159,16 +173,16 @@
                 </div>
                 <div class="post__action">
                   <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                  <span class="post__stats">
+                  <a class="post__stats" href="#">
                     Hравится: <span class="post__stats-count">150</span>
-                  </span>
+                  </a>
                 </div>
               </div>
             </article>
             <article class="post  post--card">
-              <div class="post__image">
+              <a class="post__image" href="#">
                 <img src="img/photo-6-mobile@1x.jpg" alt="Надежда" width="280" height="180">
-              </div>
+              </a>
               <div class="post__body">
                 <header class="post__header">
                   <span class="post__author">Надежда</span>
@@ -179,9 +193,9 @@
                 </div>
                 <div class="post__action">
                   <button class="post__like-btn  like-btn" type="button" title="Мне нравится">Мне нравится</button>
-                  <span class="post__stats">
+                  <a class="post__stats" href="#">
                     Hравится: <span class="post__stats-count">2560</span>
-                  </span>
+                  </a>
                 </div>
               </div>
             </article>
@@ -232,7 +246,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="photo-editor__tool">
+                    <li class="photo-editor__tool  photo-editor__tool--contrast">
                       <div class="photo-editor__tab">
                         <span class="photo-editor__tool-name">
                           <img src="img/icon-editor-contrast.svg" alt="">
@@ -265,15 +279,29 @@
         <img src="img/logo-pink-blue-mobile.svg" alt="Pink" width="147" height="40">
       </a>
       <div class="page-footer__social  social">
-        <a class="social__link  social__link--twitter" href="#">Twitter</a>
-        <a class="social__link  social__link--facebook" href="#">Facebook</a>
-        <a class="social__link  social__link--youtube" href="#">Youtube</a>
+        <a class="social__link  social__link--twitter" href="#">
+          <svg class="social__icon  social__icon--twitter" width="18" height="15" title="Twitter">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter-icon"></use>
+          </svg>
+        </a>
+        <a class="social__link  social__link--facebook" href="#">
+          <svg class="social__icon  social__icon--facebook" width="9" height="19" title="Facebook">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook-icon"></use>
+          </svg>
+        </a>
+        <a class="social__link  social__link--youtube" href="#">
+          <svg class="social__icon  social__icon--youtube" width="15" height="14" title="Youtube">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#youtube-icon"></use>
+          </svg>
+        </a>
       </div>
       <div class="page-footer__copyright  copyright">
         <span class="copyright__develop-txt">Разработано</span>
         <a class="copyright__owner" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           HTML Academy
-          <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+          <svg class="copyright__academy" width="27" height="34">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#academy-logo"></use>
+          </svg>
         </a>
       </div>
     </footer>
