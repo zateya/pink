@@ -1,7 +1,6 @@
 .rates__title {
   font-size: 24px;
   line-height: 30px;
-  font-weight: 300;
   text-align: center;
 }
 
@@ -22,7 +21,7 @@
   @media (min-width: $desktops) {
     @include angled-bg($height: 65px);
     padding-top: 140px;
-    padding-bottom: 95px;
+    padding-bottom: 96px;
   }
 }
 
@@ -35,8 +34,6 @@
 .rates__table {
   position: relative;
   left: 50%;
-  font-weight: 300;
-  line-height: 30px;
   transform: translateX(-50%);
   border-collapse: collapse;
   width: 262.5%;
@@ -133,9 +130,9 @@
 .rates__item {
   position: relative;
   border-top: 0;
-  padding-top: 16px;
+  padding-top: 17px;
   padding-right: 68px;
-  padding-bottom: 13px;
+  padding-bottom: 18px;
   padding-left: 22px;
   background-color: $white;
   border: 2px solid $grey;
@@ -147,7 +144,7 @@
   }
 
   @media (min-width: $desktops) {
-    padding: 13px 22px 14px;
+    padding: 16px 22px 13px;
   }
 
   &--feature-title {

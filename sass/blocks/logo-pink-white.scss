@@ -1,0 +1,46 @@
+.logo-pink-white use {
+  fill: $white;
+  color: $pink;
+}
+
+.logo-pink-white__stars,
+.logo-pink-white__star {
+  fill: currentColor;
+}
+
+.logo-pink-white:hover use {
+  fill: $pink;
+  color: $white;
+}
+
+.logo-pink-white:active use {
+  fill: $white;
+  color: $pink;
+  opacity: 0.3;
+}
+
+.logo-pink-white--mobile {
+  @media (min-width: $tablets) {
+    display: none;
+  }
+}
+
+.logo-pink-white--tablet {
+  display: none;
+
+  @media (min-width: $tablets) {
+    display: block;
+  }
+
+  @media (min-width: $desktops) {
+    display: none;
+  }
+}
+
+.logo-pink-white--desktop {
+  display: none;
+
+  @media (min-width: $desktops) {
+    display: block;
+  }
+}

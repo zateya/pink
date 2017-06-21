@@ -180,6 +180,7 @@
 
   &--contacts {
     @media (min-width: $tablets) {
+      position: relative;
       margin: 0;
       padding-bottom: 28px;
     }
@@ -213,6 +214,38 @@
       margin-left: 20px;
       margin-top: 10px;
       order: 2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 60px;
+        height: 59px;
+        background-color: $grey;
+      }
+    }
+  }
+
+  &--phone {
+    @media (min-width: $tablets) {
+      &::before {
+        background-image: url(../img/icon-phone.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 19px;
+      }
+    }
+  }
+
+  &--email {
+    @media (min-width: $tablets) {
+      &::before {
+        background-image: url(../img/icon-mail.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 13px;
+      }
     }
   }
 }
@@ -241,13 +274,18 @@
     border-color: $blue-dark;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: $pink;
   }
 
   &::placeholder {
     color: $font-color;
     opacity: 1;
+  }
+
+  &--contacts {
+    padding-right: 62px;
   }
 }
 
@@ -346,6 +384,18 @@
   outline: none;
 }
 
+.form__checkbox-input:checked ~ .form__checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 22px;
+  height: 16px;
+  background: url(../img/icon-check.svg) no-repeat top left;
+  background-size: 22px 16px;
+  z-index: 1;
+}
+
 .form__radio-fields {
   padding-top: 20px;
 
@@ -419,7 +469,7 @@
   outline: none;
 }
 
-.form__radio-input:checked + .form__radio-label::after {
+.form__radio-input:checked ~ .form__radio-label::after {
   content: "";
   display: block;
   position: absolute;
@@ -473,7 +523,8 @@
     border-color: $blue-dark;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: $pink;
   }
 

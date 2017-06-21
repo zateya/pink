@@ -48,10 +48,21 @@
 .post__panorama {
   display: block;
   position: relative;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
 
   @media (max-width: $phones-max) {
     @include container-phones;
+  }
+
+  @media (min-width: $tablets) {
+    height: 509px;
+  }
+
+  @media (min-width: $desktops) {
+    height: 506px;
   }
 }
 
@@ -60,39 +71,17 @@
 
   @media (min-width: $tablets) {
     position: relative;
-    height: 509px;
     width: auto;
     max-width: inherit;
     left: 50%;
     transform: translateX(-50%);
   }
-
-  @media (min-width: $desktops) {
-    height: 506px;
-  }
 }
 
-.post__rubric-wrapper {
+.post__panorama-rubric {
   position: absolute;
   top: 0;
-  right:0;
-  width: 100%;
-}
-
-.post__rubric-inner {
-  @include container;
-  text-align: right;
-
-  @media (min-width: $tablets) {
-    padding-top: 57px;
-  }
-
-  @media (min-width: $desktops) {
-    padding-top: 54px;
-  }
-}
-
-.post__rubric-title {
+  left: 50%;
   display: inline-block;
   vertical-align: top;
   font-size: 12px;
@@ -102,6 +91,16 @@
   background-color: $pink;
   text-transform: uppercase;
   padding: 6px 20px;
+
+  @media (min-width: $tablets) {
+    transform: translateX(170px);
+    top: 57px;
+  }
+
+  @media (min-width: $desktops) {
+    transform: translateX(330px);
+    top: 54px;
+  }
 }
 
 .post__image {

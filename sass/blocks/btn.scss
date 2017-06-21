@@ -71,7 +71,8 @@
     }
   }
 
-  &--submit {
+  &--submit,
+  &--popup {
     padding: 17px 30px 16px;
     border-radius: 3px;
     font-size: 18px;
@@ -87,6 +88,11 @@
 
     &:active {
       color: rgba($white, 0.3);
+    }
+
+    &:disabled {
+      background-color: $grey;
+      cursor: default;
     }
   }
 }

@@ -49,7 +49,7 @@
 
 .downloads__download-btn {
   width: 100%;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablets) {
     margin-bottom: 46px;
@@ -66,16 +66,40 @@
 
 .downloads__app {
   display: inline-block;
+  vertical-align: top;
   width: 47px;
   height: 56px;
   background-color: $pink;
   margin-right: 16px;
   margin-left: 16px;
+
+  &--apple {
+    background: url(../img/logo-apple.svg) no-repeat top left;
+    background-size: 47px 56px;
+  }
+
+  &--android {
+    background: url(../img/logo-android.svg) no-repeat center 8px;
+    background-size: 43px 47px;
+
+    @media (min-width: $tablets) {
+      opacity: 0.4;
+    }
+
+    @media (min-width: $desktops) {
+      opacity: 1;
+    }
+  }
+
+  &--windows {
+    background: url(../img/logo-microsoft.svg) no-repeat right 12px;
+    background-size: 44px 41px;
+  }
 }
 
 .downloads__desc {
   font-weight: 300;
-  margin-top: 18px;
+  margin-top: 22px;
 
   @media (min-width: $tablets) {
     font-size: 18px;
@@ -84,6 +108,6 @@
   }
 
   @media (min-width: $desktops) {
-    margin-top: 56px;
+    margin-top: 55px;
   }
 }

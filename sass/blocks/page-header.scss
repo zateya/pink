@@ -41,10 +41,8 @@
     margin-top: 27px;
     margin-bottom: 43px;
   }
-}
 
-.page-header__logo img {
-  @media (min-width: $tablets) {
-    padding-top: 17px;
+  @media (min-width: $desktops) {
+    margin-left: 0;
   }
 }
