@@ -44,7 +44,11 @@
     border: 2px solid $grey;
     border-radius: 2px;
     padding: 0;
-    margin-bottom: 65px;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-bottom: 56px;
   }
 
   &--fullname {
@@ -55,7 +59,7 @@
     }
 
     @media (min-width: $desktops) {
-      margin-top: 4px;
+      margin-top: 12px;
       width: 435px;
     }
   }
@@ -128,6 +132,7 @@
   }
 
   @media (min-width: $tablets) {
+    position: relative;
     padding: 0 32px;
     margin: -1px auto 0;
     width: auto;
@@ -156,7 +161,7 @@
 .form__text-fields {
   &--contacts {
     @media (min-width: $tablets) {
-      padding: 28px 58px 0;
+      padding: 36px 58px 0;
     }
 
     @media (min-width: $desktops) {
@@ -164,7 +169,7 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-top: 26px;
+      padding-top: 35px;
     }
   }
 }
@@ -301,11 +306,11 @@
   padding-top: 23px;
 
   @media (min-width: $tablets) {
-    padding: 34px 58px 48px;
+    padding: 44px 58px 47px;
   }
 
   @media (min-width: $desktops) {
-    padding: 34px 58px 56px;
+    padding-bottom: 56px;
   }
 
   &--achievements {
@@ -408,12 +413,12 @@
   padding-top: 20px;
 
   @media (min-width: $tablets) {
-    padding: 35px 58px 55px;
+    padding: 45px 58px 52px;
   }
 
   &--apps {
     @media (min-width: $desktops) {
-      padding: 37px 74px 44px;
+      padding: 45px 74px 55px;
     }
   }
 }
@@ -492,11 +497,10 @@
 
 .form__textarea-fields {
   @media (min-width: $tablets) {
-    padding: 28px 58px 51px;
+    padding: 35px 58px 51px;
   }
 
   @media (min-width: $desktops) {
-    padding-top: 25px;
     padding-bottom: 43px;
   }
 }
