@@ -2,19 +2,20 @@
   @media (min-width: $desktops) {
     margin-left: auto;
     width: 760px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 34px;
+    padding-bottom: 36px;
     flex-shrink: 1;
   }
 }
 
 .main-nav__items {
-  display: flex;
-  flex-direction: column;
+  display: block;
   text-align: center;
   @include reset-list;
 
   @media (min-width: $desktops) {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-direction: row;
     border-top: none;

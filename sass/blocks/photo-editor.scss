@@ -16,7 +16,6 @@
 }
 
 .photo-editor__form {
-
   @media (min-width: $tablets) {
     display: flex;
   }
@@ -117,7 +116,7 @@
     padding-bottom: 13px;
   }
 
-  &--contrast {
+  &--compact {
     @media (min-width: $tablets) {
       padding-top: 22px;
       padding-bottom: 24px;
@@ -130,35 +129,98 @@
   }
 }
 
-.photo-editor__tab {
-  padding-left: 16px;
-  padding-right: 16px;
-
-  @media (max-width: $phones-max) {
-    display: inline-block;
-    vertical-align: top;
-  }
+.photo-editor__tool-name {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 16px;
+  margin-left: 16px;
+  width: 48px;
+  height: 48px;
 
   @media (min-width: $tablets) {
-    padding-left: 3px;
-    padding-right: 1px;
+    margin-right: 1px;
+    margin-left: 3px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
 
   @media (min-width: $desktops) {
-    padding: 0;
+    margin: 0;
+    width: 48px;
+    height: 48px;
   }
 }
 
-.photo-editor__tool-name {
-  display: inline-block;
-  vertical-align: top;
-  width: 48px;
-  height: 48px;
-  background-color: $pink;
+.photo-editor__tool-icon {
+  fill: rgba($blue-dark, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  @media (min-width: $tablets) and (max-width: $tablets-max) {
-    width: 24px;
-    height: 24px;
+  &:hover {
+    fill: rgba($blue-dark, 0.5);
+    cursor: pointer;
+  }
+
+  &--active {
+    fill: $pink;
+  }
+
+  @media (min-width: $tablets) {
+    fill: $pink;
+  }
+
+  &--crop {
+    width: 48px;
+    height: 48px;
+
+    @media (min-width: $tablets) {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: $desktops) {
+      width: 48px;
+      height: 48px;
+      margin-left: -2px;
+      margin-top: 1px;
+    }
+  }
+
+  &--fill {
+    width: 48px;
+    height: 48px;
+
+    @media (min-width: $tablets) {
+      margin-top: 2px;
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: $desktops) {
+      margin-top: 3px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+
+    @media (min-width: $tablets) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (min-width: $desktops) {
+      width: 32px;
+      height: 32px;
+      margin-left: -2px;
+    }
   }
 }
 
@@ -168,8 +230,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 29px;
-    padding-bottom: 29px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: $grey-light;
   }
 
   @media (min-width: $tablets) {
@@ -180,8 +243,15 @@
   }
 
   @media (min-width: $desktops) {
+    padding-top: 14px;
     padding-right: 30px;
+    padding-bottom: 10px;
     padding-left: 44px;
+
+    &--compact {
+      padding-top: 13px;
+      padding-top: 11px;
+    }
   }
 }
 
@@ -194,7 +264,7 @@
 
 .photo-editor__range-scale {
   height: 2px;
-  background-color: $blue-dark;
+  background-color: #283645;
 }
 
 .photo-editor__range-value {
@@ -211,10 +281,16 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid $pink;
+  border: 2px solid #d22856;
   border-radius: 50%;
-  background-color: $white;
+  background-color: #fff;
   cursor: pointer;
+  outline: none;
+
+  &:active,
+  &:focus {
+    background-color: $pink;
+  }
 }
 
 .photo-editor__btns {

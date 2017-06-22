@@ -1,5 +1,17 @@
 .copyright {
   font-size: 0;
+  margin-top: 40px;
+
+  @media (min-width: $tablets) {
+    margin-top: 14px;
+    width: 150px;
+    text-align: right;
+  }
+
+  @media (min-width: $tablets) {
+    margin-top: 14px;
+    width: 170px;
+  }
 }
 
 .copyright__develop-txt {

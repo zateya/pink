@@ -1,0 +1,44 @@
+.logo-pink-blue {
+  fill: $blue-dark;
+  color: $pink;
+}
+
+.logo-pink-blue__stars {
+  fill: inherit;
+}
+
+.logo-pink-blue__star {
+  fill: currentColor;
+}
+
+.logo-pink-blue__glasses {
+  fill: currentColor;
+}
+
+.logo-pink-blue:hover {
+  fill: $pink;
+}
+
+.logo-pink-blue:active {
+  fill: $blue-dark;
+  color: $pink;
+  opacity: 0.3;
+}
+
+.logo-pink-blue--mobile {
+  width: 147px;
+  height: 40px;
+  @media (min-width: $desktops) {
+    display: none;
+  }
+}
+
+.logo-pink-blue--desktop {
+  width: 147px;
+  height: 40px;
+  display: none;
+
+  @media (min-width: $desktops) {
+    display: block;
+  }
+}

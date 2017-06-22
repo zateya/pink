@@ -35,6 +35,10 @@
     margin-bottom: 65px;
   }
 
+  @media (min-width: $desktops) {
+    margin-bottom: 64px;
+  }
+
   &--fullname {
     @media (min-width: $tablets) {
       order: -3;
@@ -43,7 +47,7 @@
     }
 
     @media (min-width: $desktops) {
-      margin-top: 4px;
+      margin-top: 5px;
       width: 435px;
     }
   }
@@ -102,25 +106,30 @@
   }
 }
 
-.form__legend {
-  padding: 0 30px;
-  margin: 4px 0 16px;
+.form__title {
   width: 100%;
+  padding-top: 4px;
+  padding-bottom: 16px;
   text-align: center;
   color: $pink;
+  font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
   text-transform: uppercase;
 
   @media (max-width: $phones-max) {
-    display: block;
+    @include container-phones(40px);
   }
 
   @media (min-width: $tablets) {
+    display: inline-block;
+    position: relative;
     padding: 0 32px;
-    margin: -1px auto 0;
+    margin: 0;
     width: auto;
     background-color: $white;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -13px);
   }
 
   &--contacts {
@@ -136,11 +145,8 @@
   }
 
   &--emotions {
-    margin-bottom: 15px;
-
     @media (min-width: $tablets) {
       padding: 0 38px;
-      margin-bottom: 0;
     }
   }
 }
@@ -148,7 +154,7 @@
 .form__text-fields {
   &--contacts {
     @media (min-width: $tablets) {
-      padding: 28px 58px 0;
+      padding: 22px 58px 0;
     }
 
     @media (min-width: $desktops) {
@@ -156,7 +162,7 @@
       flex-direction: row;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding-top: 26px;
+      padding-top: 19px;
     }
   }
 }
@@ -180,6 +186,7 @@
 
   &--contacts {
     @media (min-width: $tablets) {
+      position: relative;
       margin: 0;
       padding-bottom: 28px;
     }
@@ -213,6 +220,38 @@
       margin-left: 20px;
       margin-top: 10px;
       order: 2;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 60px;
+        height: 59px;
+        background-color: $grey;
+      }
+    }
+  }
+
+  &--phone {
+    @media (min-width: $tablets) {
+      &::before {
+        background-image: url(../img/icon-phone.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px 19px;
+      }
+    }
+  }
+
+  &--email {
+    @media (min-width: $tablets) {
+      &::before {
+        background-image: url(../img/icon-mail.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 13px;
+      }
     }
   }
 }
@@ -241,7 +280,8 @@
     border-color: $blue-dark;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: $pink;
   }
 
@@ -249,17 +289,22 @@
     color: $font-color;
     opacity: 1;
   }
+
+  &--contacts {
+    padding-right: 62px;
+  }
 }
 
 .form__checkbox-fields {
   padding-top: 23px;
 
   @media (min-width: $tablets) {
-    padding: 34px 58px 48px;
+    padding: 27px 58px 47px;
   }
 
   @media (min-width: $desktops) {
-    padding: 34px 58px 56px;
+    padding-top: 28px;
+    padding-bottom: 56px;
   }
 
   &--achievements {
@@ -290,7 +335,7 @@
 
 
     &:not(:last-child) {
-      margin-right: 55px;
+      margin-right: 56px;
     }
   }
 }
@@ -344,18 +389,31 @@
   height: 39px;
   z-index: 0;
   outline: none;
+  opacity: 0;
+}
+
+.form__checkbox-input:checked ~ .form__checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 22px;
+  height: 16px;
+  background: url(../img/icon-check.svg) no-repeat top left;
+  background-size: 22px 16px;
+  z-index: 1;
 }
 
 .form__radio-fields {
   padding-top: 20px;
 
   @media (min-width: $tablets) {
-    padding: 35px 58px 55px;
+    padding: 30px 58px 52px;
   }
 
   &--apps {
     @media (min-width: $desktops) {
-      padding: 37px 74px 44px;
+      padding: 30px 74px 52px;
     }
   }
 }
@@ -417,9 +475,10 @@
   height: 39px;
   z-index: 0;
   outline: none;
+  opacity: 0;
 }
 
-.form__radio-input:checked + .form__radio-label::after {
+.form__radio-input:checked ~ .form__radio-label::after {
   content: "";
   display: block;
   position: absolute;
@@ -434,17 +493,16 @@
 
 .form__textarea-fields {
   @media (min-width: $tablets) {
-    padding: 28px 58px 51px;
+    padding: 22px 58px 51px;
   }
 
   @media (min-width: $desktops) {
-    padding-top: 25px;
-    padding-bottom: 43px;
+    padding: 18px 58px 42px;
   }
 }
 
 .form__textarea {
-  padding:  15px 20px 14px;
+  padding:  14px 20px 14px;
   margin: 0;
   display: block;
   border: 2px solid $grey;
@@ -473,7 +531,8 @@
     border-color: $blue-dark;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     border-color: $pink;
   }
 

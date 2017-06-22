@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-bottom: 14px;
+  padding-bottom: 17px;
 
   @media (min-width: $tablets) {
     padding-bottom: 28px;
@@ -65,7 +65,7 @@
 }
 
 .contacts__item {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablets) {
     width: 300px;
@@ -130,14 +130,86 @@
 }
 
 .contacts__map {
+  position: relative;
   height: 200px;
-  background: url(../img/bg-map-mobile@1x.png) no-repeat center;
+  background-image: url(../img/bg-map-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
 
-  @media (min-width: $tablets) {
-    height: 372px;
+  @media (min-resolution: $retina-dpi),
+        (min-resolution: $retina-dppx) {
+    background-image: url(../img/bg-map-mobile@2x.jpg);
+    background-size: 320px auto;
   }
 
   @media (min-width: $tablets) {
+    height: 372px;
+    background-image: url(../img/bg-map-tablet@1x.jpg);
+    background-position: center -349px;
+  }
+
+  @media (min-width: $tablets) and (min-resolution: $retina-dpi),
+        (min-width: $tablets) and (min-resolution: $retina-dppx) {
+    background-image: url(../img/bg-map-tablet@2x.jpg);
+    background-size: 700px auto;
+  }
+
+  @media (min-width: $desktops) {
     height: 502px;
+    background-image: url(../img/bg-map-desktop@1x.jpg);
+    background-position: center -277px;
+  }
+
+  @media (min-width: $desktops) and (min-resolution: $retina-dpi),
+        (min-width: $desktops) and (min-resolution: $retina-dppx) {
+    background-image: url(../img/bg-map-desktop@2x.jpg);
+    background-size: 1200px auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(-50%, -50%);
+    margin-top: 11px;
+    background-image: url(../img/icon-map-marker.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    @media (min-width: $tablets) {
+      margin-top: 24px;
+    }
+
+    @media (min-width: $desktops) {
+      margin-top: 31px;
+    }
+  }
+
+  &--map-loaded::after {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: 1;
+
+    @media (min-width: $tablets) {
+      height: 68px;
+    }
+
+    @media (min-width: $desktops) {
+      height: 102px;
+    }
   }
 }

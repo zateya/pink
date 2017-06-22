@@ -27,30 +27,12 @@
 .page-footer__logo {
   display: inline-block;
   vertical-align: top;
-}
-
-.page-footer__social {
-  margin-top: 33px;
 
   @media (min-width: $tablets) {
-    margin-top: 3px;
-    margin-right:18px;
+    width: 150px;
   }
-
-  @media (min-width: $desktops) {
-    margin-left: 12px;
-    margin-right: 0;
-  }
-}
-
-.page-footer__copyright {
-  margin-top: 40px;
 
   @media (min-width: $tablets) {
-    margin-top: 14px;
-  }
-
-  @media (min-width: $desktops) {
-    margin-top: 14px;
+    width: 170px;
   }
 }
