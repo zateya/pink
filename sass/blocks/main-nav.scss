@@ -9,12 +9,13 @@
 }
 
 .main-nav__items {
-  display: flex;
-  flex-direction: column;
+  display: block;
   text-align: center;
   @include reset-list;
 
   @media (min-width: $desktops) {
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     flex-direction: row;
     border-top: none;

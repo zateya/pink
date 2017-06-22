@@ -167,10 +167,10 @@
 
     &::before {
       top: 0;
-      left: 50%;
       width: 292px;
       height: 302px;
-      transform: translateX(-50%);
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 

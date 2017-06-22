@@ -78,11 +78,8 @@
     background-image: url("../img/iphone-hand-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: left bottom;
-
-    @media (max-width: $phones-max) {
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-resolution: $retina-dpi),
           (min-resolution: $retina-dppx) {

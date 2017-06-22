@@ -10,6 +10,7 @@
   padding-top: 91px;
   padding-bottom: 42px;
   @include angled-bg;
+  max-width: 100%;
   overflow: hidden;
 
   @media (min-width: $tablets) {

@@ -21,8 +21,12 @@
 }
 
 .page-header__wrapper {
+  width: 100%;
+
   @media (min-width: $desktops) {
-    @include container;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
   }
 }
