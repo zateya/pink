@@ -1,4 +1,4 @@
-.logo-pink-white use {
+.logo-pink-white {
   fill: $white;
   color: $pink;
 }
@@ -8,12 +8,12 @@
   fill: currentColor;
 }
 
-.logo-pink-white:hover use {
+.logo-pink-white:hover {
   fill: $pink;
   color: $white;
 }
 
-.logo-pink-white:active use {
+.logo-pink-white:active {
   fill: $white;
   color: $pink;
   opacity: 0.3;
