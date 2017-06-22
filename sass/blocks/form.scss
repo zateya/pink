@@ -27,6 +27,18 @@
   border: none;
   position: relative;
 
+  @media (max-width: $phones-max) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: inherit;
+    }
+  }
+
   @media (min-width: $tablets) {
     position: relative;
     border: 2px solid $grey;
@@ -103,8 +115,6 @@
 }
 
 .form__legend {
-  padding: 0 30px;
-  margin: 4px 0 16px;
   width: 100%;
   text-align: center;
   color: $pink;
@@ -112,7 +122,9 @@
   text-transform: uppercase;
 
   @media (max-width: $phones-max) {
-    display: block;
+    @include container-phones(40px);
+    transform: translateY(38px);
+    margin-bottom: 20px;
   }
 
   @media (min-width: $tablets) {
@@ -120,7 +132,6 @@
     margin: -1px auto 0;
     width: auto;
     background-color: $white;
-    transform: translateY(-50%);
   }
 
   &--contacts {
@@ -136,11 +147,8 @@
   }
 
   &--emotions {
-    margin-bottom: 15px;
-
     @media (min-width: $tablets) {
       padding: 0 38px;
-      margin-bottom: 0;
     }
   }
 }
