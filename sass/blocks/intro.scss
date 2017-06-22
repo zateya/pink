@@ -86,7 +86,7 @@
 
     @media (min-resolution: $retina-dpi),
           (min-resolution: $retina-dppx) {
-      background-image: url("../img/iphone-hand-mobile@2x.jpg");
+      background-image: url("../img/iphone-hand-mobile@2x.png");
       background-size: 258px auto;
     }
 
@@ -103,7 +103,7 @@
 
     @media (min-width: $tablets) and (min-resolution: $retina-dpi),
           (min-width: $tablets) and (min-resolution: $retina-dppx) {
-      background-image: url("../img/iphone-hand-tablet@2x.jpg");
+      background-image: url("../img/iphone-hand-tablet@2x.png");
       background-size: 700px auto;
     }
 
@@ -117,7 +117,7 @@
 
     @media (min-width: $desktops) and (min-resolution: $retina-dpi),
           (min-width: $desktops) and (min-resolution: $retina-dppx) {
-      background-image: url("../img/iphone-hand-desktop@2x.jpg");
+      background-image: url("../img/iphone-hand-desktop@2x.png");
       background-size: 1050px auto;
     }
   }

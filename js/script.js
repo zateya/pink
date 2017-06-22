@@ -28,3 +28,38 @@ navToggle.addEventListener('click', function() {
     pageIntro.classList.remove('intro--short');
   }
 });
+
+var mapContainer = document.querySelector('.contacts__map');
+
+var map ='';
+google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, 'resize', m_res );
+function init() {
+	var mapOptions = {
+		zoom: 15,
+		mapTypeControl: false,
+		zoomControl: true,
+		scrollwheel: false,
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.right_bottom
+		},
+		streetViewControl: false,
+		center: new google.maps.LatLng(59.937369, 30.321056),
+	};
+
+	var mapElement = document.getElementById('map');
+  mapElement.classList.add('contacts__map--map-loaded');
+	map = new google.maps.Map(mapElement, mapOptions);
+	var image = '../img/icon-map-marker.svg';
+	var marker = new google.maps.Marker({
+		position: new google.maps.LatLng(59.936287, 30.321047),
+		map: map,
+		icon: image
+	});
+
+	m_res();
+}
+function m_res(){
+	google.maps.event.trigger(map, "resize");
+	map.panTo(new google.maps.LatLng(59.937369, 30.321056));
+}
