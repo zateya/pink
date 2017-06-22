@@ -47,7 +47,7 @@ function init() {
 	var mapElement = document.getElementById('map');
   mapElement.classList.add('contacts__map--map-loaded');
   map = new google.maps.Map(mapElement, mapOptions);
-  var image = '../img/icon-map-marker.svg';
+  var image = 'img/icon-map-marker.svg';
   var marker = new google.maps.Marker({
 	position: new google.maps.LatLng(59.936287, 30.321047),
 	map: map,
