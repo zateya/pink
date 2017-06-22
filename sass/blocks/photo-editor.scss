@@ -116,7 +116,7 @@
     padding-bottom: 13px;
   }
 
-  &--compact {
+  &--contrast {
     @media (min-width: $tablets) {
       padding-top: 22px;
       padding-bottom: 24px;
@@ -226,13 +226,17 @@
 
 .photo-editor__control {
   @media (max-width: $phones-max) {
+    display: none;
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 27px;
     background-color: $grey-light;
+
+    &--crop {
+      display: block;
+    }
   }
 
   @media (min-width: $tablets) {
@@ -248,7 +252,7 @@
     padding-bottom: 10px;
     padding-left: 44px;
 
-    &--compact {
+    &--contrast {
       padding-top: 13px;
       padding-top: 11px;
     }
