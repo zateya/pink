@@ -268,22 +268,22 @@
                 <div class="photo-editor__tools-wrapper">
                   <ul class="photo-editor__tools">
                     <li class="photo-editor__tool">
-                      <div class="photo-editor__tool-name" for="crop-tool" title="Обрезка">
+                      <div class="photo-editor__tool-name" title="Обрезка">
                         <svg class="photo-editor__tool-icon  photo-editor__tool-icon--crop  photo-editor__tool-icon--active" viewBox="0 0 48 48" width="48" height="48">
                           <path fill="none" d="M0,0h48v48H0V0z"/>
                           <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                         </svg>
                         Обрезка
                       </div>
-                      <div class="photo-editor__control">
-                        <div class="photo-editor__range">
+                      <div class="photo-editor__control  photo-editor__control--crop">
+                        <div class="photo-editor__range  photo-editor__range--crop">
                           <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
                           <div class="photo-editor__range-btn" tabindex="0"></div>
                         </div>
                       </div>
                     </li>
                     <li class="photo-editor__tool">
-                      <div class="photo-editor__tool-name" for="fill-tool" title="Цветокоррекция">
+                      <div class="photo-editor__tool-name" title="Цветокоррекция">
                         <svg class="photo-editor__tool-icon  photo-editor__tool-icon--fill" viewBox="0 0 48 48" width="48" height="48">
                           <path fill="none" d="M0,0h48v48H0V0z"/>
                           <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
@@ -291,23 +291,23 @@
                         </svg>
                         Цветокоррекция
                       </div>
-                      <div class="photo-editor__control">
-                        <div class="photo-editor__range">
+                      <div class="photo-editor__control  photo-editor__control--fill">
+                        <div class="photo-editor__range  photo-editor__range--fill">
                           <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
                           <div class="photo-editor__range-btn" tabindex="0"></div>
                         </div>
                       </div>
                     </li>
-                    <li class="photo-editor__tool  photo-editor__tool--compact">
-                      <div class="photo-editor__tool-name" for="contrast-tool" title="Контраст">
+                    <li class="photo-editor__tool  photo-editor__tool--contrast">
+                      <div class="photo-editor__tool-name" title="Контраст">
                         <svg class="photo-editor__tool-icon  photo-editor__tool-icon--contrast" viewBox="-35.422 -7.96 31.92 31.92" width="32" height="32">
                           <path d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
                           <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
                         </svg>
                         Контраст
                       </div>
-                      <div class="photo-editor__control  photo-editor__control--compact">
-                        <div class="photo-editor__range">
+                      <div class="photo-editor__control  photo-editor__control--contrast">
+                        <div class="photo-editor__range  photo-editor__range--contrast">
                           <div class="photo-editor__range-scale"><div class="photo-editor__range-value" style="width: 84%"></div></div>
                           <div class="photo-editor__range-btn" tabindex="0"></div>
                         </div>
@@ -358,7 +358,7 @@
           </g>
         </svg>
       </a>
-      <div class="page-footer__social  social">
+      <div class="social  social--gallery">
         <a class="social__link  social__link--twitter" href="#">
           <svg class="social__icon  social__icon--twitter" viewBox="0 0 17.5 14.663" width="18" height="15">
             <path d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
@@ -375,7 +375,7 @@
           </svg>
         </a>
       </div>
-      <div class="page-footer__copyright  copyright">
+      <div class="copyright  copyright--gallery">
         <span class="copyright__develop-txt">Разработано</span>
         <a class="copyright__owner" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           HTML Academy
