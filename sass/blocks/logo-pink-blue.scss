@@ -26,12 +26,16 @@
 }
 
 .logo-pink-blue--mobile {
+  width: 147px;
+  height: 40px;
   @media (min-width: $desktops) {
     display: none;
   }
 }
 
 .logo-pink-blue--desktop {
+  width: 147px;
+  height: 40px;
   display: none;
 
   @media (min-width: $desktops) {
