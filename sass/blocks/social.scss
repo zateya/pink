@@ -1,5 +1,10 @@
 .social {
   font-size: 0;
+  margin-top: 33px;
+
+  @media (min-width: $tablets) {
+    margin-top: 3px;
+  }
 }
 
 .social__link {
