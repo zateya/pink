@@ -44,6 +44,10 @@
     margin-bottom: 64px;
   }
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &--fullname {
 
     @media (max-width: $phones-max) {
@@ -102,7 +106,6 @@
 
   &--emotions {
     padding-bottom: 0;
-    margin-bottom: 0;
 
     @media (min-width: $desktops) {
       width: 100%;
