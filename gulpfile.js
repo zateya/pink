@@ -58,10 +58,10 @@ gulp.task("clean", function() {
 
 gulp.task("copy", function() {
   return gulp.src([
-       "fonts/**/*.{woff,woff2}",
-       "img/**",
-       "js/**",
-       "*.html"
+         "fonts/**/*.{woff,woff2}",
+         "img/**",
+         "js/**",
+         "*.html"
      ], {
        base: "."
      })
