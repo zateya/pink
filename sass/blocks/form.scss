@@ -1,5 +1,8 @@
 .form {
+  margin: 0;
+  padding-top: 10px;
   padding-bottom: 15px;
+  overflow: hidden;
 
   @media (min-width: $tablets) {
     padding-bottom: 50px;
@@ -11,6 +14,7 @@
 }
 
 .form__body {
+  margin: 0;
   display: flex;
   flex-direction: column;
 
@@ -22,17 +26,18 @@
 }
 
 .form__fieldset {
+  position: relative;
   margin: 0;
+  left: 0;
   padding: 34px 0 42px;
   border: none;
-  position: relative;
+  max-width: 100%;
 
   @media (min-width: $tablets) {
-    position: relative;
-    border: 2px solid $grey;
-    border-radius: 2px;
     padding: 0;
     margin-bottom: 65px;
+    border: 2px solid $grey;
+    border-radius: 2px;
   }
 
   @media (min-width: $desktops) {
@@ -40,6 +45,11 @@
   }
 
   &--fullname {
+
+    @media (max-width: $phones-max) {
+      padding-top: 24px;
+    }
+
     @media (min-width: $tablets) {
       order: -3;
       padding: 0;
@@ -122,14 +132,16 @@
   }
 
   @media (min-width: $tablets) {
-    display: inline-block;
     position: relative;
+    top: -10px;
+    left: 50%;
+    display: inline-block;
+    vertical-align: top;
     padding: 0 32px;
     margin: 0;
     width: auto;
     background-color: $white;
-    left: 50%;
-    transform: translate(-50%, -13px);
+    transform: translateX(-50%);
   }
 
   &--contacts {
@@ -202,6 +214,46 @@
   }
 }
 
+.form__input-wrapper {
+  position: relative;
+
+  &--contacts {
+    @media (min-width: $tablets) {
+      padding-right: 60px;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 62px;
+        height: 100%;
+        border-radius: 2px;
+        border-right: 2px solid transparent;
+      }
+    }
+  }
+
+  &--email {
+    @media (min-width: $tablets) {
+      &::before {
+        background: $grey url(../img/icon-mail.svg) no-repeat center;
+        background-size: 18px 13px;
+      }
+    }
+  }
+
+  &--phone {
+    @media (min-width: $tablets) {
+      &::before {
+        background: $grey url(../img/icon-phone.svg) no-repeat center;
+        background-size: 20px 19px;
+      }
+    }
+  }
+}
+
 .form__text-label {
   margin-left: 23px;
   text-transform: uppercase;
@@ -220,36 +272,6 @@
       margin-left: 20px;
       margin-top: 10px;
       order: 2;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        width: 60px;
-        height: 59px;
-        background-color: $grey;
-      }
-    }
-  }
-
-  &--phone {
-    @media (min-width: $tablets) {
-      &::before {
-        background-image: url(../img/icon-phone.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
-  }
-
-  &--email {
-    @media (min-width: $tablets) {
-      &::before {
-        background-image: url(../img/icon-mail.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-      }
     }
   }
 }
@@ -264,7 +286,8 @@
 
 .form__text-input {
   display: block;
-  padding:  15px 20px 14px;
+  box-sizing: border-box;
+  padding:  14px 20px 15px;
   width: 100%;
   border: 2px solid $grey;
   border-radius: 2px;
@@ -286,10 +309,6 @@
   &::placeholder {
     color: $font-color;
     opacity: 1;
-  }
-
-  &--contacts {
-    padding-right: 62px;
   }
 }
 
