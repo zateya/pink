@@ -219,7 +219,7 @@
 
   &--contacts {
     @media (min-width: $tablets) {
-      padding-right: 60px;
+      padding-right: 62px;
 
       &::before {
         content: "";
@@ -285,8 +285,6 @@
 }
 
 .form__text-input {
-  display: block;
-  box-sizing: border-box;
   padding:  14px 20px 15px;
   width: 100%;
   border: 2px solid $grey;
