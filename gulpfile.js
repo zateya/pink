@@ -24,7 +24,7 @@ gulp.task("style", function() {
         "last 2 versions"
       ]}),
       mqpacker({
-        sort: true
+        sort: false
       })
     ]))
     .pipe(gulp.dest("build/css"))
@@ -46,7 +46,7 @@ gulp.task("symbols", function() {
   return gulp.src("build/img/icons/*.svg")
     .pipe(svgmin())
     .pipe(svgstore({
-      inlineSvg: false
+      inlineSvg: true
      }))
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("build/img"));
