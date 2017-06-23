@@ -297,13 +297,20 @@
   color: $font-color;
   outline: none;
 
+  &--contacts {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   &:hover {
     border-color: $blue-dark;
+    border-radius: 2px;
   }
 
   &:active,
   &:focus {
     border-color: $pink;
+    border-radius: 2px;
   }
 
   &::placeholder {
