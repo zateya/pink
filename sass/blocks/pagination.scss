@@ -18,7 +18,7 @@
   margin-right: 1px;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 6px;
@@ -43,7 +43,7 @@
   }
 
   &‐‐active::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 12px;
