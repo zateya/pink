@@ -50,6 +50,11 @@
   }
 }
 
+.rates__header + .rates__header {
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
 .rates__header {
   position: relative;
   background-color: $blue-dark;
@@ -104,11 +109,6 @@
       left: 0;
     }
   }
-}
-
-.rates__header + .rates__header {
-  border-left: 2px solid transparent;
-  border-right: 2px solid transparent;
 }
 
 .rates__flag {
