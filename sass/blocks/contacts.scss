@@ -172,7 +172,7 @@
     top: 50%;
     left: 50%;
     width: 36px;
-    height: 36px;
+    height: 35px;
     transform: translate(-50%, -50%);
     margin-top: 11px;
     background-image: url(../img/icon-map-marker.svg);
@@ -202,14 +202,17 @@
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: 100% 33px;
     z-index: 1;
 
     @media (min-width: $tablets) {
       height: 68px;
+      background-size: 100% 68px;
     }
 
     @media (min-width: $desktops) {
       height: 102px;
+      background-size: 100% 102px;
     }
   }
 }

@@ -1,4 +1,9 @@
 .like-btn {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  display: inline-block;
+  vertical-align: top;
   width: 13px;
   height: 12px;
   background-color: transparent;
@@ -6,18 +11,19 @@
   padding: 0;
   text-indent: -1000px;
   overflow: hidden;
-  background: url("../img/icon-heart.svg") no-repeat top left;
+  background: url("../img/icon-heart.svg") no-repeat center;
   background-size: 13px 12px;
   outline: none;
   cursor: pointer;
+
+  @media (min-width: $tablets) {
+    right: 0;
+    left: auto;
+  }
 
   @media (min-width: $desktops) {
     width: 14px;
     height: 12px;
     background-size: 14px 12px;
-  }
-
-  &:hover {
-    transform: scale(1.2);
   }
 }

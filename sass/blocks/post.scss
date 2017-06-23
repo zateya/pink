@@ -169,9 +169,9 @@
 }
 
 .post__time {
-  display: inline-block;
-  vertical-align: top;
+  display: inline;
   font-size: 12px;
+  line-height: 12px;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -212,16 +212,5 @@
 
   &:hover {
     text-decoration: underline;
-  }
-}
-
-.post__like-btn {
-  position: absolute;
-  top: 6px;
-  left: 0;
-
-  @media (min-width: $tablets) {
-    right: 0;
-    left: auto;
   }
 }

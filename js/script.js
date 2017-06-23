@@ -48,10 +48,18 @@ if (mapElement) {
 
     mapElement.classList.add("contacts__map--map-loaded");
     map = new google.maps.Map(mapElement, mapOptions);
-    var image = "img/icon-map-marker.svg";
+    var image = {
+      url: 'img/icon-map-marker.svg',
+      size: new google.maps.Size(35, 36),
+      scaledSize: new google.maps.Size(35, 36),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(0, 36)
+    };
+
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(59.936287, 30.321047),
       map: map,
+      optimized: false,
       icon: image
     });
     m_res();
