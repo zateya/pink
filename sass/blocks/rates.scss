@@ -78,6 +78,8 @@
   &:last-of-type {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    border-left: none;
+    border-right: none;
   }
 
   &--flag::before {
@@ -107,11 +109,6 @@
 .rates__header + .rates__header {
   border-left: 2px solid transparent;
   border-right: 2px solid transparent;
-}
-
-.rates__header:last-of-type {
-  border-left: none;
-  border-right: none;
 }
 
 .rates__flag {
