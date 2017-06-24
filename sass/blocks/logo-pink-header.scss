@@ -1,0 +1,70 @@
+.logo-pink-header {
+  display: inline-block;
+  vertical-align: top;
+  margin: 22px 20px;
+  height: 22px;
+
+  @media (min-width: $tablets) {
+    margin-top: 27px;
+    margin-bottom: 43px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-left: 0;
+  }
+}
+
+.logo-pink-header__svg {
+  fill: $white;
+  color: $pink;
+
+  &--mobile {
+    width: 75px;
+    height: 22px;
+
+    @media (min-width: $tablets) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    width: 147px;
+    height: 40px;
+    display: none;
+
+    @media (min-width: $tablets) {
+      display: block;
+    }
+
+    @media (min-width: $desktops) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    width: 147px;
+    height: 40px;
+    display: none;
+
+    @media (min-width: $desktops) {
+      display: block;
+    }
+  }
+}
+
+.logo-pink-header[href]:hover .logo-pink-header__svg {
+  fill: $pink;
+  color: $white;
+}
+
+.logo-pink-header[href]:active .logo-pink-header__svg {
+  fill: $white;
+  color: $pink;
+  opacity: 0.3;
+}
+
+.logo-pink-header__stars,
+.logo-pink-header__star {
+  fill: currentColor;
+}

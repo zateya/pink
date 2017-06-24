@@ -23,16 +23,3 @@
     padding-bottom: 72px;
   }
 }
-
-.page-footer__logo {
-  display: inline-block;
-  vertical-align: top;
-
-  @media (min-width: $tablets) {
-    width: 150px;
-  }
-
-  @media (min-width: $tablets) {
-    width: 170px;
-  }
-}
