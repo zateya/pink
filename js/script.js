@@ -41,19 +41,19 @@ if (mapElement) {
         mapTypeControl: false,
         zoomControl: true,
         scrollwheel: false,
-        zoomControlOptions: {position: google.maps.ControlPosition.right_bottom},
+        zoomControlOptions: {position: google.maps.ControlPosition.LEFT_CENTER},
       streetViewControl: false,
-      center: new google.maps.LatLng(59.937369, 30.321056),
+      center: new google.maps.LatLng(59.936287, 30.321047),
     };
 
-    mapElement.classList.add("contacts__map--map-loaded");
+    mapElement.classList.add("contacts-map--map-loaded");
     map = new google.maps.Map(mapElement, mapOptions);
     var image = {
       url: "img/icon-map-marker.svg",
-      size: new google.maps.Size(35, 36),
-      scaledSize: new google.maps.Size(35, 36),
+      size: new google.maps.Size(36, 36),
+      scaledSize: new google.maps.Size(36, 36),
       origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(0, 36)
+      anchor: new google.maps.Point(18, 18)
     };
 
     var marker = new google.maps.Marker({
@@ -67,6 +67,6 @@ if (mapElement) {
 
   function m_res(){
     google.maps.event.trigger(map, "resize");
-    map.panTo(new google.maps.LatLng(59.937369, 30.321056));
+    map.panTo(new google.maps.LatLng(59.936287, 30.321047));
   }
 }

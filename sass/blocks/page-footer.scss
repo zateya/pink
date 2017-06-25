@@ -1,7 +1,22 @@
-.page-footer {
+.page-footer__map-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+
+  @media (min-width: $tablets) {
+    padding-top: 372px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 502px;
+  }
+}
+
+.page-footer__wrapper {
   @include container;
   padding-top: 40px;
   padding-bottom: 40px;
+  background-color: $white;
 
   @media (max-width: $phones-max) {
     text-align: center;
