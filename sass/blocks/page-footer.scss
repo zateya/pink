@@ -4,11 +4,11 @@
   overflow: hidden;
 
   @media (min-width: $tablets) {
-    padding-top: 372px;
+    height: 372px;
   }
 
   @media (min-width: $desktops) {
-    padding-top: 502px;
+    height: 502px;
   }
 }
 
