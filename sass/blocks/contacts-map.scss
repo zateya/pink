@@ -5,7 +5,7 @@
   min-height: 225px;
   background-image: url(../img/bg-map-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center -225px;
 
   @media (min-resolution: $retina-dpi),
         (min-resolution: $retina-dppx) {
@@ -37,23 +37,6 @@
     background-size: 1200px auto;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 36px;
-    height: 36px;
-    transform: translate(-50%, -50%);
-    background-image: url(../img/icon-map-marker.svg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-  }
-
-  &--map-loaded::after {
-    display: none;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -76,5 +59,22 @@
       height: 102px;
       background-size: 100% 102px;
     }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/icon-map-marker.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  &--map-loaded::after {
+    display: none;
   }
 }
