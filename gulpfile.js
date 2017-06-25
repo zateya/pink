@@ -5,14 +5,15 @@ var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var server = require("browser-sync").create();
 var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var rename = require("gulp-rename");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
+var jsmin = require('gulp-jsmin');
 var del = require("del");
-var server = require("browser-sync").create();
 var run = require("run-sequence");
 
 gulp.task("clean", function() {
@@ -46,7 +47,8 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -78,6 +80,27 @@ gulp.task("html:update", ["html:copy"], function(done) {
    done();
 });
 
+gulp.task("js", function() {
+  gulp.src("js/script.js")
+    .pipe(gulp.dest("build/js"))
+    .pipe(jsmin())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:copy", function() {
+   return gulp.src("*js/script.js")
+     .pipe(gulp.dest("build/js"))
+     .pipe(jsmin())
+     .pipe(rename("script.min.js"))
+     .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js:update", ["js:copy"], function(done) {
+   server.reload();
+   done();
+});
+
 gulp.task("serve", function() {
   server.init({
     server: "build/",
@@ -89,6 +112,7 @@ gulp.task("serve", function() {
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html", ["html:update"]);
+  gulp.watch("js/script.js", ["js:update"]);
 });
 
 gulp.task ("build", function(fn) {
@@ -96,6 +120,7 @@ gulp.task ("build", function(fn) {
     "clean",
     "copy",
     "style",
+    "js",
     "images",
     "symbols",
     fn
