@@ -5,35 +5,21 @@
 
   @media (min-width: $tablets) {
     width: 150px;
+    flex-shrink: 0;
+    margin-bottom: 17px;
   }
 
-  @media (min-width: $tablets) {
+  @media (min-width: $desktops) {
     width: 170px;
+    margin-bottom: 19px;
   }
 }
 
 .logo-pink-footer__svg {
   fill: $blue-dark;
   color: $pink;
-
-  &--mobile {
-    width: 147px;
-    height: 40px;
-
-    @media (min-width: $desktops) {
-      display: none;
-    }
-  }
-
-  &--desktop {
-    width: 147px;
-    height: 40px;
-    display: none;
-
-    @media (min-width: $desktops) {
-      display: block;
-    }
-  }
+  width: 147px;
+  height: 40px;
 }
 
 .logo-pink-footer[href]:hover .logo-pink-footer__svg {
@@ -46,14 +32,37 @@
   opacity: 0.3;
 }
 
+.logo-pink-footer__glasses {
+  fill: currentColor;
+
+  @media (min-width: $desktops) {
+    display: none;
+  }
+}
+
+.logo-pink-footer__glasses-crop {
+  display: none;
+
+  @media (min-width: $desktops) {
+    display: block;
+    fill: currentColor;
+  }
+}
+
 .logo-pink-footer__stars {
-  fill: inherit;
+  display: none;
+
+  @media (min-width: $desktops) {
+    display: block;
+    fill: inherit;
+  }
 }
 
 .logo-pink-footer__star {
-  fill: currentColor;
-}
+  display: none;
 
-.logo-pink-footer__glasses {
-  fill: currentColor;
+  @media (min-width: $desktops) {
+    display: block;
+    fill: currentColor;
+  }
 }

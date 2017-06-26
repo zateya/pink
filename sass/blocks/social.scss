@@ -1,13 +1,12 @@
 .social {
   font-size: 0;
-  margin-top: 33px;
+  margin-top: 35px;
 
   @media (min-width: $tablets) {
-    margin-top: 3px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktops) {
-    margin-top: 4px;
     margin-left: 8px;
 
     &--index {
@@ -24,8 +23,17 @@
   height: 51px;
   border: 3px solid rgba($blue-dark, 0.1);
   border-radius: 50%;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin: 5px 6px;
+
+  @media (min-width: $tablets) {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 
   &:hover:not(:active) {
     border-color: $blue-dark;

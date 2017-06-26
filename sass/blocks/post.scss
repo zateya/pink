@@ -151,10 +151,25 @@
   }
 
   &--panorama {
-    position: relative;
-
     @media (min-width: $tablets) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding-right: 29px;
       padding-bottom: 24px;
+    }
+
+    @media (min-width: $desktops) {
+      padding-right: 31px;
+    }
+  }
+}
+
+.post__header {
+  &--panorama {
+    @media (min-width: $tablets) {
+      order: -2;
+      flex-grow: 1;
+      margin-right: 20px;
     }
   }
 }
@@ -177,9 +192,9 @@
 }
 
 .post__action {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-top: 10px;
-  padding-left: 31px;
 
   @media (min-width: $tablets) {
     margin-top: 12px;
@@ -190,25 +205,31 @@
     margin-top: 10px;
 
     @media (min-width: $tablets) {
-      position: absolute;
-      top: 0;
-      right: 29px;
-      padding-right: 30px;
-      margin-top: 24px;
-    }
-
-    @media (min-width: $desktops) {
-      right: 31px;
+      margin-top: 0;
+      order: -1;
     }
   }
 }
 
 .post__stats {
+  margin-left: 19px;
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
   color: $pink;
   text-decoration: none;
+
+  @media (min-width: $tablets) {
+    margin-left: 0;
+    order: -1;
+    margin-right: auto;
+  }
+
+  &--panorama {
+    @media (min-width: $tablets) {
+      margin-right: 17px;
+    }
+  }
 
   &:hover {
     text-decoration: underline;

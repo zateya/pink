@@ -1,9 +1,4 @@
 .like-btn {
-  position: absolute;
-  top: 6px;
-  left: 0;
-  display: inline-block;
-  vertical-align: top;
   width: 13px;
   height: 12px;
   background-color: transparent;
@@ -15,11 +10,6 @@
   background-size: 13px 12px;
   outline: none;
   cursor: pointer;
-
-  @media (min-width: $tablets) {
-    right: 0;
-    left: auto;
-  }
 
   @media (min-width: $desktops) {
     width: 14px;

@@ -239,7 +239,7 @@
   }
 }
 
-.advantages__item p {
+.advantages__text {
   margin: 0;
 }
 
@@ -328,7 +328,6 @@
 }
 
 .advantages__research-lead {
-  @include reset-child-margins;
   position: relative;
   padding-top: 40px;
   padding-bottom: 23px;
@@ -343,16 +342,8 @@
   }
 }
 
-.advantages__research-lead p {
-  margin-top: 0;
-  margin-bottom: 10px;
-
-  @media (min-width: $desktops) {
-    margin-bottom: 30px;
-  }
-}
-
 .advantages__research-title {
+  margin-top: 0;
   margin-bottom: 9px;
   font-size: 30px;
   line-height: 36px;
@@ -366,6 +357,19 @@
     margin-bottom: 20px;
     max-width: inherit;
   }
+}
+
+.advantages__research-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: $desktops) {
+    margin-bottom: 30px;
+  }
+}
+
+.advantages__research-link-text {
+  margin: 0;
 }
 
 .advantages__research-link {

@@ -1,16 +1,18 @@
 .copyright {
   font-size: 0;
-  margin-top: 40px;
+  margin-top: 34px;
 
   @media (min-width: $tablets) {
+    flex-shrink: 0;
     margin-top: 14px;
+    margin-bottom: 9px;
     width: 150px;
     text-align: right;
   }
 
-  @media (min-width: $tablets) {
-    margin-top: 14px;
+  @media (min-width: $desktops) {
     width: 170px;
+    margin-top: 15px;
   }
 }
 
@@ -18,10 +20,7 @@
   font-size: $font-size;
   display: inline-block;
   vertical-align: top;
-
-  @media (min-width: $tablets) {
-    padding-top: 3px;
-  }
+  padding-top: 3px;
 
   @media (min-width: $desktops) {
     padding-top: 5px;
@@ -33,7 +32,7 @@
 .copyright__owner {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 14px;
+  margin-left: 15px;
   width: 27px;
   height: 34px;
 }
