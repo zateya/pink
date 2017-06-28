@@ -217,6 +217,14 @@
   }
 }
 
+.form__text-label + .form__input-wrapper {
+  margin-top: 6px;
+
+  @media (min-width: $tablets) {
+    margin-top: 0;
+  }
+}
+
 .form__input-wrapper {
   position: relative;
 
